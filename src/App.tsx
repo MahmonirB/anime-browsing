@@ -10,8 +10,7 @@ const GENRE_COLLECTION = gql`
 
 function App() {
   const { data } = useQuery(GENRE_COLLECTION);
-  console.log(data);
-
+  
   return (
     <div className="App">
       <h1 className="text-3xl font-bold underline">
