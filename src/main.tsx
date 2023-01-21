@@ -1,11 +1,10 @@
 import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import { client } from '../apollo';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { client } from '../apollo';
 import Landing from './Landing';
+import './index.css';
 
 const router = createBrowserRouter([
   {
