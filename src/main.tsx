@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { client } from '../apollo';
-import Landing from './Landing';
+import Landing from './pages/Landing';
 import './index.css';
 
 const router = createBrowserRouter([
