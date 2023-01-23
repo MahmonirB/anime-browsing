@@ -494,6 +494,7 @@ module.exports = {
       '5/6': '83.333333%',
       full: '100%',
       screen: '100vh',
+      half: '50vh',
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',

@@ -1,5 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import Header from '../../components/header/Header';
+import SearchPanel from '../../components/searchPanel/searchPanel';
 
 const GENRE_COLLECTION = gql`
   query GetGenreQuery {
@@ -11,8 +12,9 @@ function Landing() {
     const { data } = useQuery(GENRE_COLLECTION);
 
     return (
-      <div className='flex w-full h-full flex-col'>
+      <div>
           <Header />
+          <SearchPanel />
           
       </div>
   );
