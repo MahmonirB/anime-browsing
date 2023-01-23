@@ -1,5 +1,5 @@
 import { gql, useQuery } from '@apollo/client';
-import Header from '../../containers/header/Header';
+import Header from '../../components/navbar/Header';
 import SearchPanel from '../../containers/searchPanel/SearchPanel';
 
 const GENRE_COLLECTION = gql`
