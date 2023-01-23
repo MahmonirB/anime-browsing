@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchPanel() {
     return (
-        <div className="bg-indigo-100 py-12 md:py-12 md:flex md:h-half md:items-center">
+        <div className="bg-gradient-to-tl from-indigo-300 to-teal-300 py-12 md:py-12 md:flex md:h-half md:items-center">
           <div className="container px-4 mx-auto">
       
             <div className="text-center max-w-2xl mx-auto">
