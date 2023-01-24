@@ -9,8 +9,8 @@ import './index.css';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Landing />
-  }
+    element: <Landing />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ApolloProvider client={client}>
       <RouterProvider router={router} />
     </ApolloProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

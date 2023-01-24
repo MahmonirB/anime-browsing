@@ -4,19 +4,18 @@ import SearchPanel from '../../containers/searchPanel/SearchPanel';
 
 const GENRE_COLLECTION = gql`
   query GetGenreQuery {
-  GenreCollection
-}
+    GenreCollection
+  }
 `;
 
 function Landing() {
-    const { data } = useQuery(GENRE_COLLECTION);
+  const { data } = useQuery(GENRE_COLLECTION);
 
-    return (
-      <div>
-          <Header />
-          <SearchPanel />
-          
-      </div>
+  return (
+    <div>
+      <Header />
+      <SearchPanel />
+    </div>
   );
 }
 
