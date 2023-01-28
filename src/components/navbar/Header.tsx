@@ -24,7 +24,7 @@ function Header() {
           </div>
 
           <div
-            className={`md:flex flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${
+            className={`md:flex items-center flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${
               showNavbar ? 'flex' : 'hidden'
             }`}
             id="navbar-collapse"
