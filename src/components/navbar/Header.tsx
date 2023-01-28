@@ -12,7 +12,7 @@ function Header() {
       <nav className="bg-white py-5 md:py-4">
         <div className="w-full md:mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center ml-3">
-            <a href="#" className="font-bold text-xl text-indigo-600">
+            <a href="#" className="font-bold text-xl text-indigo-900">
               AnimeSuche
             </a>
             <button
@@ -24,9 +24,8 @@ function Header() {
           </div>
 
           <div
-            className={`md:flex flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${
-              showNavbar ? 'flex' : 'hidden'
-            }`}
+            className={`md:flex items-center flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${showNavbar ? 'flex' : 'hidden'
+              }`}
             id="navbar-collapse"
           >
             <a
@@ -53,7 +52,7 @@ function Header() {
             >
               Contact
             </a>
-            <a href="#" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-600">
+            <a href="#" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-900">
               Home
             </a>
           </div>
