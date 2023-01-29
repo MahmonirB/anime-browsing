@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -40,12 +41,11 @@ function Header() {
             >
               Genres
             </a>
-            <a
-              href="#"
+            <Link to="/media"
               className="p-1 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
             >
-              Studio
-            </a>
+              Media
+            </Link>
             <a
               href="#"
               className="p-1 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
