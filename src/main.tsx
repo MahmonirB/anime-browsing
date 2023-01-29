@@ -5,11 +5,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { client } from '../apollo';
 import Landing from './pages/Landing';
 import './index.css';
+import Media from './containers/media/Media';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Landing />,
+  },
+  {
+    path: '/media',
+    element: <Media />,
   },
 ]);
 
