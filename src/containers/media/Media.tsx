@@ -1,5 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
+import MediaItem from '../../components/media/MediaItem/mediaItem';
 
 const MEDIA = gql`
 query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -22,16 +23,24 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
       }
       isFavourite
       status
+      duration
+      description
+      episodes
+      siteUrl
+      seasonYear
+      genres
     }
-  }
+}
 }`;
 
 function Media() {
-    const { data: Page } = useQuery(MEDIA);
-    console.log(Page)
+  const { data: pageData, loading } = useQuery(MEDIA);
+  console.log(pageData)
 
-    return (
-        <div></div>
-    );
+  return (
+    <div>
+      {pageData?.Page?.media?.map((mediaItem: any, index: number) => <MediaItem key={index} title={mediaItem.genres.toString()} description={mediaItem.description} imageSource={mediaItem.coverImage.medium} />)}
+    </div>
+  );
 }
 export default Media;
