@@ -29,7 +29,6 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
 
 function Media() {
   const { data: Page, loading } = useQuery(MEDIA);
-  console.log(Page)
 
   if (loading) return <Spinner />
 
