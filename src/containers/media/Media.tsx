@@ -1,5 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
+import Spinner from '../../components/spinner/Spinner';
 
 const MEDIA = gql`
 query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -27,11 +28,13 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
 }`;
 
 function Media() {
-    const { data: Page } = useQuery(MEDIA);
-    console.log(Page)
+  const { data: Page, loading } = useQuery(MEDIA);
+  console.log(Page)
 
-    return (
-        <div></div>
-    );
+  if (loading) return <Spinner />
+
+  return (
+    <div></div>
+  );
 }
 export default Media;
