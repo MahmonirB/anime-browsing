@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -12,7 +13,7 @@ function Header() {
       <nav className="bg-white py-5 md:py-4">
         <div className="w-full md:mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center ml-3">
-            <a href="#" className="font-bold text-xl text-indigo-600">
+            <a href="#" className="font-bold text-xl text-indigo-900">
               AnimeSuche
             </a>
             <button
@@ -24,9 +25,8 @@ function Header() {
           </div>
 
           <div
-            className={`md:flex flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${
-              showNavbar ? 'flex' : 'hidden'
-            }`}
+            className={`md:flex items-center flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white absolute md:relative md:w-1/2 transition duration-900 ${showNavbar ? 'flex' : 'hidden'
+              }`}
             id="navbar-collapse"
           >
             <a
@@ -41,19 +41,18 @@ function Header() {
             >
               Genres
             </a>
-            <a
-              href="#"
+            <Link to="/media"
               className="p-1 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
             >
-              Studio
-            </a>
+              Media
+            </Link>
             <a
               href="#"
               className="p-1 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
             >
               Contact
             </a>
-            <a href="#" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-600">
+            <a href="#" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-900">
               Home
             </a>
           </div>
