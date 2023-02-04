@@ -1,4 +1,5 @@
 import React from 'react';
+import Tips from '../../../components/tips/Tips';
 
 function MediaItem({mediaItemData}: any) {
     return (
@@ -14,7 +15,7 @@ function MediaItem({mediaItemData}: any) {
             <div className='flex flex-col justify-between pl-4 border-l border-slate-200'>
                 <label className='font-bold text-xs text-slate-600'>Duration: {mediaItemData?.duration}</label>
                 <label className='font-bold text-xs text-slate-600'>Year: {mediaItemData?.seasonYear}</label>
-                <div className=' bg-indigo-400 w-28 h-8 rounded-xl text-center pt-1 text-white'><label className='text-sm font-semibold'>{mediaItemData?.status}</label></div>
+                <Tips title={mediaItemData?.status} type='secondary' size='medium' />
             </div>
         </div>
     )
