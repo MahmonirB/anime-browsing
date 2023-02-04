@@ -15,15 +15,15 @@ const typeClass = {
 
 function Tips({ title, size, type = 'primary' }: Tips) {
     const tips = {
-        small: <div className={`w-16 h-6 rounded-xl text-center ${typeClass[type]}`}>
+        small: <div className={`w-16 h-6 rounded-xl text-center py-1 ${typeClass[type]}`}>
             <label className='text-xs'>{title}</label>
         </div>,
 
-        medium: <div className={`w-28 h-8 rounded-xl text-center pt-1 ${typeClass[type]}`}>
+        medium: <div className={`w-28 h-8 rounded-xl text-center pt-1 py-1 ${typeClass[type]}`}>
             <label className='text-sm font-semibold'>{title}</label>
         </div>,
 
-        large: <div className={`w-40 h-12 rounded-xl text-center pt-3 ${typeClass[type]}`}>
+        large: <div className={`w-40 h-12 rounded-xl text-center pt-3 py-1 ${typeClass[type]}`}>
             <label className='text-base font-semibold'>{title}</label>
         </div>
     }
