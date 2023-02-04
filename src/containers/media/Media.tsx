@@ -28,6 +28,7 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
       duration
       genres
       seasonYear
+      siteUrl
     }
   }
 }`;
