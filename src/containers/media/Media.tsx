@@ -28,6 +28,7 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
       duration
       genres
       seasonYear
+      siteUrl
     }
   }
 }`;
@@ -38,7 +39,7 @@ function Media() {
   if (loading) return <Spinner />
 
   return (
-    <div className='flex flex-col items-center w-full px-9 py-4'>
+    <div className='flex flex-col items-center w-full px-1 sm:px-9 py-4'>
       {pageData?.Page?.media?.length > 0 && pageData?.Page?.media?.map((mediaItem: any) =>
         <MediaItem mediaItemData={mediaItem} />
       )}

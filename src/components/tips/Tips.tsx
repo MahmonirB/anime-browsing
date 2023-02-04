@@ -19,11 +19,11 @@ function Tips({ title, size, type = 'primary' }: Tips) {
             <label className='text-xs'>{title}</label>
         </div>,
 
-        medium: <div className={`w-28 h-8 rounded-2xl text-center pt-1 py-1 ${typeClass[type]}`}>
+        medium: <div className={`w-28 h-8 rounded-xl text-center pt-1 py-1 ${typeClass[type]}`}>
             <label className='text-sm font-semibold'>{title}</label>
         </div>,
 
-        large: <div className={`w-40 h-12 rounded-3xl text-center pt-3 py-1 ${typeClass[type]}`}>
+        large: <div className={`w-40 h-12 rounded-xl text-center pt-3 py-1 ${typeClass[type]}`}>
             <label className='text-base font-semibold'>{title}</label>
         </div>
     }
