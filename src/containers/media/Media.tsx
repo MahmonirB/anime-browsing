@@ -5,6 +5,7 @@ import SearchBar from '../../components/searchBar/SearchBar';
 import Spinner from '../../components/spinner/Spinner';
 import MediaItem from './meidaItem/MediaItem';
 import useDebounce from '../../hooks/useDebounce';
+import EmtptyState from '../../components/emptyState/EmptyState';
 
 const MEDIA = gql`
 query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -69,7 +70,8 @@ function Media() {
         total={pageInfo?.total}
         currentPage={pageInfo?.currentPage}
         onChangePage={setCurrentPage}
-      /> : null}
+      />
+        : <EmtptyState />}
     </div>
   );
 }
