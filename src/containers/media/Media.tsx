@@ -55,14 +55,15 @@ function Media() {
   if (loading) return <Spinner />
 
   return (
-    <div className='flex flex-col items-center w-full px-1 sm:px-9 py-4'>
+    <div className='flex flex-col items-center w-full px-1 sm:px-9 pb-4'>
       <h4 className="font-medium leading-tight text-2xl mt-0 mb-2 text-indigo-700 m-4">Media List</h4>
+
       <SearchBar searchText={search} onChangeSearch={setSeach} />
+
       {pageData?.Page?.media?.length > 0 && pageData?.Page?.media?.map((mediaItem: any, index: number) =>
         <MediaItem key={index} mediaItemData={mediaItem} />
       )}
 
-      
       {pageInfo?.total ? <Pagination
         hasNextPage={pageInfo?.hasNextPage}
         total={pageInfo?.total}
