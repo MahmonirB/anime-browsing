@@ -1,7 +1,14 @@
 import React from 'react';
 
-function Pagination({ hasNextPage, total, currentPage, onChangePage }: any) {
-    console.log(currentPage)
+interface PaginationProps {
+    hasNextPage: boolean;
+    total: number;
+    currentPage: number;
+    onChangePage: (value: number) => void;
+}
+
+function Pagination({ hasNextPage, total, currentPage, onChangePage }: PaginationProps) {
+
     const commonClass = 'page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 hover:bg-gray-200 focus:shadow-none';
     return (
         <div className="flex justify-center">
