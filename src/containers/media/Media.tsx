@@ -8,7 +8,7 @@ import useDebounce from '../../hooks/useDebounce';
 import EmtptyState from '../../components/emptyState/EmptyState';
 
 const MEDIA = gql`
-query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+query MEDIA_QUERY ($id: Int, $page: Int, $perPage: Int, $search: String) {
   Page (page: $page, perPage: $perPage) {
     pageInfo {
       total
