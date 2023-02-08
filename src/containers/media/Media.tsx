@@ -53,13 +53,13 @@ function Media() {
   });
   const pageInfo = pageData?.Page?.pageInfo;
 
-  if (loading) return <Spinner />
-
   return (
     <div className='flex flex-col items-center w-full px-1 sm:px-9 pb-4'>
       <h4 className="font-medium leading-tight text-2xl mb-2 text-indigo-700 m-4 mt-24">Media List</h4>
 
       <SearchBar searchText={search} onChangeSearch={setSeach} />
+
+      {loading ? <Spinner /> : <></>}
 
       {pageData?.Page?.media?.length > 0 && pageData?.Page?.media?.map((mediaItem: any, index: number) =>
         <MediaItem key={index} mediaItemData={mediaItem} />
