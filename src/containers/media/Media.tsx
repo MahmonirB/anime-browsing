@@ -71,7 +71,7 @@ function Media() {
         currentPage={pageInfo?.currentPage}
         onChangePage={setCurrentPage}
       />
-        : <EmtptyState />}
+        : !loading && <EmtptyState />}
     </div>
   );
 }
