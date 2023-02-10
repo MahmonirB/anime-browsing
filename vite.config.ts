@@ -14,14 +14,16 @@ export default defineConfig({
         short_name: 'Anime',
         theme_color: '#fff',
         start_url: '/',
+        display: 'standalone',
+        orientation: 'portrait',
         icons: [
           {
-            src: '/pwa-192x192.png',
+            src: '/favIcons/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
+            src: '/favIcons/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
