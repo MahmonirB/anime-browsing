@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', '**/*.{png}'],
       manifest: {
-        id: '1.0.0',
-        name: 'AnimeSuche',
+        id: '1.0.1',
+        name: 'Anime Suche',
         short_name: 'Anime',
         theme_color: '#fff',
         start_url: '/',
