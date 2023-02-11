@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Pusher from 'pusher-js';
 import Alert from '../../components/alert/Alert';
 
+interface PushBody {
+    title: string;
+    message: string;
+}
+
 function PushNotification() {
     const [notification, setNotification] = useState<any | undefined>();
 
@@ -11,9 +16,8 @@ function PushNotification() {
         });
 
         const channel = pusher.subscribe('my-channel');
-        channel.bind('my-event', function (data: any) {
+        channel.bind('my-event', function (data: PushBody) {
             setNotification(data);
-            console.log({ notification });
         });
 
         return () => {
@@ -23,7 +27,12 @@ function PushNotification() {
     }, []);
 
     if (notification)
-        return <Alert title='title' content='content' onClose={() => setNotification(undefined)} />
+        return (
+            <Alert
+                title={notification?.title}
+                content={notification?.message}
+                onClose={() => setNotification(undefined)}
+            />)
 
     return <></>;
 }
