@@ -15,6 +15,11 @@ function PushNotification() {
             setNotification(data);
             console.log({ notification });
         });
+
+        return () => {
+            pusher.unbind();
+            channel.unbind();
+        }
     }, []);
 
     if (notification)
