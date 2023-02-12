@@ -12,7 +12,7 @@ function SignIn() {
             <div className="px-6 py-12 h-full">
                 <div className="flex justify-center items-center flex-wrap h-1/2 sm:h-full g-6 text-gray-800">
                     <div className="md:w-1/2 lg:w-1/2 mb-12 md:mb-0">
-                        <Suspense fallback={() => <Spinner />}>
+                        <Suspense fallback={<Spinner />}>
                             <SignInSvg width={400} />
                         </Suspense>
                     </div>
@@ -26,7 +26,7 @@ function SignIn() {
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                             >
-                                <Suspense fallback={() => <Spinner />}>
+                                <Suspense fallback={<Spinner />}>
                                     <GoogleSvg width={30} height={30} />
                                 </Suspense>
                                 <label>  Continue with Google</label>
@@ -39,7 +39,7 @@ function SignIn() {
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                             >
-                                <Suspense fallback={() => <Spinner />}>
+                                <Suspense fallback={<Spinner />}>
                                     <FacebookSvg width={20} />
                                 </Suspense>
                                 <label>Continue with Facebook</label>
@@ -52,7 +52,7 @@ function SignIn() {
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                             >
-                                <Suspense fallback={() => <Spinner />}>
+                                <Suspense fallback={<Spinner />}>
                                     <TwitterSvg width={30} />
                                 </Suspense>
                                 <label>   Continue with Twitter</label>
