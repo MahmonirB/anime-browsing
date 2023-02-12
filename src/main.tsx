@@ -6,6 +6,7 @@ import { client } from '../apollo';
 import Landing from './pages/Landing';
 import './index.css';
 import Media from './containers/media/Media';
+import SignIn from './containers/auth/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/media',
     element: <Media />,
+  },
+  {
+    path: '/signin',
+    element: <SignIn />,
   },
 ]);
 
