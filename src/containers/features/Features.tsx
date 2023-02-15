@@ -22,8 +22,8 @@ function Features() {
                 <div className="md:flex md:flex-wrap md:-mx-4 mt-6 md:mt-12">
                     {featureList.map((item, index) => <div key={index} className="md:w-1/3 md:px-4 xl:px-6 mt-8 md:mt-0 text-center">
                         <span className="w-20 border-t-2 border-solid border-indigo-200 inline-block mb-3"></span>
-                        <h5 className="text-xl font-bold uppercase mb-4 text-indigo-900">{item.title}</h5>
-                        <p className="text-gray-600 text-justify">{item.content}</p>
+                        <h5 className="text-xl font-bold uppercase mb-4 text-indigo-900 dark:text-indigo-500">{item.title}</h5>
+                        <p className="text-gray-600 dark:text-gray-400 text-justify">{item.content}</p>
                     </div>)}
                 </div>
 

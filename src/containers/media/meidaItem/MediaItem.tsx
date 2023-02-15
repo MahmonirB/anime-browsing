@@ -4,7 +4,7 @@ import Tips from '../../../components/tips/Tips';
 
 function MediaItem({ mediaItemData }: any) {
     return (
-        <div className='w-2/3 bg-white flex lg:flex-row flex-col justify-between px-8 py-4 my-5 shadow-md shadow-slate-200 rounded-md'>
+        <div className='w-2/3 bg-white dark:bg-stone-800 flex lg:flex-row flex-col justify-between px-8 py-4 my-5 shadow-md shadow-slate-200 rounded-md'>
             <div className='flex lg:flex-row flex-col'>
                 <a href={mediaItemData?.siteUrl} className='flex m-auto'>
                     <img src={mediaItemData?.coverImage?.medium} width={100} className='rounded-md max-w-100 min-w-100 w-100 h-24' />

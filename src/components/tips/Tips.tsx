@@ -9,8 +9,8 @@ interface Tips {
 const typeClass = {
     primary: 'bg-indigo-400 text-white',
     secondary: 'bg-white text-amber-800 border border-amber-800 ',
-    outline: 'bg-white text-indigo-400 border border-indigo-400',
-    ghost: 'bg-white text-indigo-400',
+    outline: 'bg-white text-indigo-400 dark:text-indigo-200 border border-indigo-400',
+    ghost: 'bg-white text-indigo-400 dark:text-indigo-200',
 };
 
 function Tips({ title, size, type = 'primary' }: Tips) {
