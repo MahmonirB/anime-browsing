@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { ReactComponent as SignInSvg } from '../../assets/signIn.svg';
 import { ReactComponent as GoogleSvg } from '../../assets/google.svg';
 import { ReactComponent as TwitterSvg } from '../../assets/twitter.svg';
