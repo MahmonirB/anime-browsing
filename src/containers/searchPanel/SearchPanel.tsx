@@ -7,7 +7,7 @@ function SearchPanel() {
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-2xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-medium mb-5">Get list of Aminations list, find the newest.</h1>
-          <Link to='/signin' className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</Link>
+          <a href="http://localhost:3001/login" className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</a>
         </div>
         <div className="bg-[url('/img/landing.png')] bg-contain bg-no-repeat bg-center h-40 md:h-40" />
       </div>
