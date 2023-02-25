@@ -47,15 +47,15 @@ function SignIn() {
                             <a
                                 className={`text-white ${linkClass}`}
                                 style={{ backgroundColor: '#55acee' }}
-                                href="#!"
                                 role="button"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
+                                href={`https://github.com/login/oauth/authorize?client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID}&redirect_uri=${import.meta.env.VITE_GITHUB_REDIRECT_URL}`}
                             >
                                 <Suspense fallback={<Spinner />}>
                                     <TwitterSvg width={30} />
                                 </Suspense>
-                                <label>   Continue with Twitter</label>
+                                <label>   Continue with Github</label>
                             </a>
                         </form>
                     </div>
