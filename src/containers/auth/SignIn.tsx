@@ -33,7 +33,7 @@ function SignIn() {
                             </a>
                             <a
                                 className={`text-white ${linkClass}`}
-                                href="#!"
+                                href={`http://localhost:3001/login`}
                                 style={{ backgroundColor: '#3b5998' }}
                                 role="button"
                                 data-mdb-ripple="true"
@@ -42,7 +42,7 @@ function SignIn() {
                                 <Suspense fallback={<Spinner />}>
                                     <FacebookSvg width={20} />
                                 </Suspense>
-                                <label>Continue with Facebook</label>
+                                <label>Continue with AniList</label>
                             </a>
                             <a
                                 className={`text-white ${linkClass}`}
