@@ -5,7 +5,7 @@ import Features from '../../containers/features/Features';
 import Footer from '../../containers/footer/Footer';
 import PushNotification from '../../containers/pushNotification/PushNotification';
 import SearchPanel from '../../containers/searchPanel/SearchPanel';
-import { client } from '../../../apollorestLink';
+import { client } from '../../../apolloRestLink';
 import { useRecoilState } from 'recoil';
 import { authenticationData } from '../../../recoil';
 
