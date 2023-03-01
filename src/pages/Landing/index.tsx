@@ -6,6 +6,8 @@ import Footer from '../../containers/footer/Footer';
 import PushNotification from '../../containers/pushNotification/PushNotification';
 import SearchPanel from '../../containers/searchPanel/SearchPanel';
 import { client } from '../../../apollorestLink';
+import { useRecoilState } from 'recoil';
+import { authenticationData } from '../../../recoil';
 
 const GENRE_COLLECTION = gql`
   query GetGenreQuery {
@@ -23,11 +25,12 @@ const GET_TOKEN = gql`
 
 function Landing() {
   const { data } = useQuery(GENRE_COLLECTION);
+  const [, setAuthToken] = useRecoilState(authenticationData)
 
   useEffect(() => {
-    client.query({ query: GET_TOKEN }).then(response => {
-      console.log(response.data.data.access_token);
-    });
+    client.query({ query: GET_TOKEN }).then(response =>
+      setAuthToken(response.data.data.access_token)
+    );
   }, []);
 
   return (
