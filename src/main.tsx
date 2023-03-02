@@ -8,6 +8,7 @@ import './index.css';
 import Media from './containers/media/Media';
 import SignIn from './containers/auth/SignIn';
 import { RecoilRoot } from 'recoil';
+import Profile from './containers/profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: '/signin',
     element: <SignIn />,
   },
+  {
+    path: '/profile',
+    element: <Profile />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

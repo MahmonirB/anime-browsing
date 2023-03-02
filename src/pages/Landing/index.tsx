@@ -25,7 +25,7 @@ const GET_TOKEN = gql`
 
 function Landing() {
   const { data } = useQuery(GENRE_COLLECTION);
-  const [, setAuthToken] = useRecoilState(authenticationData)
+  const [authToken, setAuthToken] = useRecoilState(authenticationData)
 
   useEffect(() => {
     client.query({ query: GET_TOKEN }).then(response =>
@@ -36,7 +36,7 @@ function Landing() {
   return (
     <div>
       <Header />
-      <SearchPanel />
+      <SearchPanel isAuthenticated={!!authToken} />
       <Features />
       <Footer />
       <PushNotification />
