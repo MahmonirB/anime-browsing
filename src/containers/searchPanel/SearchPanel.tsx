@@ -8,7 +8,7 @@ function SearchPanel({ isAuthenticated }: { isAuthenticated: boolean }) {
         <div className="text-center max-w-2xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-medium mb-5">Get list of Animations, find the newest.</h1>
           {/* <a href="http://localhost:3001/login" className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</a> */}
-          {isAuthenticated ?
+          {!isAuthenticated ?
             <Link to={'/signin'} className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</Link>
             :
             <Link to={'/profile'} className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Profile</Link>

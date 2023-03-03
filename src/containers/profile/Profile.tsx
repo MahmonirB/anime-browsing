@@ -1,23 +1,19 @@
-import { gql, useApolloClient, useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import React from 'react';
-import { useRecoilValue } from 'recoil';
-import { authenticationState } from '../../../recoil/selectors';
 
-const USER_PROFILE = gql`
+const PROFILE = gql`
 query Query {
-Viewer {
-  name
-  id
-}
-}
+  Viewer {
+    name
+    id
+  }
 }`;
 
 function Profile() {
-    const token = useRecoilValue(authenticationState);
-    const { data: userInfo } = useQuery(USER_PROFILE);
-    console.log(userInfo)
+    const { data } = useQuery(PROFILE);
+    console.log(data)
 
-    return <div></div>
+    return <div>{data}</div>
 }
 
 export default Profile;
