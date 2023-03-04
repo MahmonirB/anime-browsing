@@ -13,7 +13,7 @@ function Profile() {
     const { data } = useQuery(PROFILE);
     console.log(data)
 
-    return <div>{data}</div>
+    return <div></div>
 }
 
 export default Profile;

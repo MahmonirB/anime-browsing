@@ -28,9 +28,10 @@ function Landing() {
   const [authToken, setAuthToken] = useRecoilState(authenticationData)
 
   useEffect(() => {
-    client.query({ query: GET_TOKEN }).then(response =>
-      setAuthToken(response.data.data.access_token)
-    );
+    client.query({ query: GET_TOKEN }).then(response => {
+      localStorage.setItem('access_token', response.data.data.access_token);
+      setAuthToken(response.data.data.access_token);
+    });
   }, []);
 
   return (
