@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Pusher from 'pusher-js';
-import Alert from '../../components/alert/Alert';
+import Alert from 'src/components/alert/Alert';
 
 interface PushBody {
     title: string;

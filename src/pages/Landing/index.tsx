@@ -1,10 +1,10 @@
 import { gql, useQuery } from '@apollo/client';
 import { useEffect } from 'react';
-import Header from '../../components/navbar/Header';
-import Features from '../../containers/features/Features';
-import Footer from '../../containers/footer/Footer';
-import PushNotification from '../../containers/pushNotification/PushNotification';
-import SearchPanel from '../../containers/searchPanel/SearchPanel';
+import Header from 'src/components/navbar/Header';
+import Features from 'src/containers/features/Features';
+import Footer from 'src/containers/footer/Footer';
+import PushNotification from 'src/containers/pushNotification/PushNotification';
+import SearchPanel from 'src/containers/searchPanel/SearchPanel';
 import { client } from '../../../apolloRestLink';
 import { useRecoilState } from 'recoil';
 import { authenticationData } from '../../../recoil';

@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
-import { ReactComponent as SignInSvg } from '../../assets/signIn.svg';
-import { ReactComponent as GoogleSvg } from '../../assets/google.svg';
-import { ReactComponent as TwitterSvg } from '../../assets/twitter.svg';
-import { ReactComponent as FacebookSvg } from '../../assets/facebook.svg';
-import Spinner from '../../components/spinner/Spinner';
+import { ReactComponent as SignInSvg } from '@assets/signIn.svg';
+import { ReactComponent as GoogleSvg } from '@assets/google.svg';
+import { ReactComponent as TwitterSvg } from '@assets/twitter.svg';
+import { ReactComponent as FacebookSvg } from '@assets/facebook.svg';
+import Spinner from 'src/components/spinner/Spinner';
 
 function SignIn() {
     const linkClass = 'px-7 py-3 mb-4 font-bold text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-evenly items-center';

@@ -2,8 +2,6 @@ import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { API_URL } from './config/constants';
 import { RestLink } from 'apollo-link-rest';
 import { setContext } from '@apollo/client/link/context';
-import { authenticationState } from './recoil/selectors';
-import { useRecoilValue } from 'recoil';
 
 const httpLink = createHttpLink({
   uri: API_URL,
