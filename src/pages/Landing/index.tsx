@@ -7,7 +7,7 @@ import PushNotification from 'src/containers/pushNotification/PushNotification';
 import SearchPanel from 'src/containers/searchPanel/SearchPanel';
 import { client } from '../../../apolloRestLink';
 import { useRecoilState } from 'recoil';
-import { authenticationData } from '../../../recoil';
+import { authenticationData } from '../../store';
 
 const GENRE_COLLECTION = gql`
   query GetGenreQuery {
