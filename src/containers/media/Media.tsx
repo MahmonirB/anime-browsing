@@ -1,11 +1,11 @@
 import { gql, useQuery } from '@apollo/client';
 import React, { useState } from 'react';
-import Pagination from '../../components/pagination/Pagination';
-import SearchBar from '../../components/searchBar/SearchBar';
-import Spinner from '../../components/spinner/Spinner';
+import Pagination from 'src/components/pagination/Pagination';
+import SearchBar from 'src/components/searchBar/SearchBar';
+import Spinner from 'src/components/spinner/Spinner';
 import MediaItem from './meidaItem/MediaItem';
-import useDebounce from '../../hooks/useDebounce';
-import EmtptyState from '../../components/emptyState/EmptyState';
+import useDebounce from 'src/hooks/useDebounce';
+import EmtptyState from 'src/components/emptyState/EmptyState';
 
 const MEDIA = gql`
 query MEDIA_QUERY ($id: Int, $page: Int, $perPage: Int, $search: String) {

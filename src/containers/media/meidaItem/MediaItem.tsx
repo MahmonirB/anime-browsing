@@ -1,6 +1,6 @@
 import React from 'react';
-import TextStructure from '../../../components/textStructure/TextStructure';
-import Tips from '../../../components/tips/Tips';
+import TextStructure from 'src/components/textStructure/TextStructure';
+import Tips from 'src/components/tips/Tips';
 
 function MediaItem({ mediaItemData }: any) {
     return (

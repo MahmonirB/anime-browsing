@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
-import svgr from 'vite-plugin-svgr' ;
+import svgr from 'vite-plugin-svgr';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -33,7 +34,15 @@ export default defineConfig({
       },
     }),
     svgr({
-      svgrOptions: {}
+      svgrOptions: {},
     }),
   ],
+  resolve: {
+    alias: {
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@store': path.resolve(__dirname, './src/store'),
+      '@config': path.resolve(__dirname, './config'),
+      src: path.resolve(__dirname, './src'),
+    },
+  },
 });
