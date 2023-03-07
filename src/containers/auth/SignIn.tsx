@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { ReactComponent as SignInSvg } from '@assets/signIn.svg';
 import { ReactComponent as GoogleSvg } from '@assets/google.svg';
-import { ReactComponent as TwitterSvg } from '@assets/twitter.svg';
-import { ReactComponent as FacebookSvg } from '@assets/facebook.svg';
+import { ReactComponent as GithubSvg } from '@assets/github.svg';
+import { ReactComponent as AnilistSvg } from '@assets/anilist.svg';
 import Spinner from 'src/components/spinner/Spinner';
 
 function SignIn() {
@@ -40,7 +40,7 @@ function SignIn() {
                                 data-mdb-ripple-color="light"
                             >
                                 <Suspense fallback={<Spinner />}>
-                                    <FacebookSvg width={20} />
+                                    <AnilistSvg width={20} />
                                 </Suspense>
                                 <label>Continue with AniList</label>
                             </a>
@@ -53,7 +53,7 @@ function SignIn() {
                                 href={`https://github.com/login/oauth/authorize?client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID}&redirect_uri=${import.meta.env.VITE_GITHUB_REDIRECT_URL}`}
                             >
                                 <Suspense fallback={<Spinner />}>
-                                    <TwitterSvg width={30} />
+                                    <GithubSvg width={30} />
                                 </Suspense>
                                 <label>   Continue with Github</label>
                             </a>
