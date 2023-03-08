@@ -19,19 +19,6 @@ function SignIn() {
                     <div className="md:w-1/2 lg:w-1/3 lg:ml-20">
                         <form>
                             <a
-                                className={`text-black ${linkClass}`}
-                                href="#!"
-                                style={{ backgroundColor: 'mintcream', }}
-                                role="button"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <Suspense fallback={<Spinner />}>
-                                    <GoogleSvg width={30} height={30} />
-                                </Suspense>
-                                <label>  Continue with Google</label>
-                            </a>
-                            <a
                                 className={`text-white ${linkClass}`}
                                 href={`http://localhost:3001/login`}
                                 style={{ backgroundColor: '#3b5998' }}
@@ -56,6 +43,20 @@ function SignIn() {
                                     <TwitterSvg width={30} />
                                 </Suspense>
                                 <label>   Continue with Github</label>
+                            </a>
+                            <a
+                                className={`text-gray-300 hover:text-gray-300 cursor-not-allowed ${linkClass}`}
+                                href="#!"
+                                style={{ backgroundColor: 'mintcream', }}
+                                role="button"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                                aria-disabled="true"
+                            >
+                                <Suspense fallback={<Spinner />}>
+                                    <GoogleSvg width={30} height={30} color="gray" />
+                                </Suspense>
+                                <label>  Continue with Google</label>
                             </a>
                         </form>
                     </div>
