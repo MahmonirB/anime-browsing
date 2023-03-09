@@ -16,7 +16,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'graphql'],
-  files: ['*.ts', '*.tsx'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'no-undef': 'off',
