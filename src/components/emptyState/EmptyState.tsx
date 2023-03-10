@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 function EmtptyState() {
-    return (
-        <div className='flex flex-col justify-center items-center w-full h-half'>
-            <FontAwesomeIcon icon={faMagnifyingGlassMinus} className='text-pink-600 text-4xl text-center' />
-            <h4 className="font-medium leading-tight text-2xl mb-2 text-pink-600 m-4 mt-24">Data not found!</h4>
-        </div>
-    )
+  return (
+    <div className="flex h-half w-full flex-col items-center justify-center">
+      <FontAwesomeIcon icon={faMagnifyingGlassMinus} className="text-center text-4xl text-pink-600" />
+      <h4 className="m-4 mb-2 mt-24 text-2xl font-medium leading-tight text-pink-600">Data not found!</h4>
+    </div>
+  );
 }
 
 export default EmtptyState;

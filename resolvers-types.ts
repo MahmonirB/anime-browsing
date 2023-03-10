@@ -104,7 +104,6 @@ export type ActivityReply = {
   userId?: Maybe<Scalars['Int']>;
 };
 
-
 /** Replay to an activity item */
 export type ActivityReplyTextArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
@@ -177,7 +176,7 @@ export type ActivityReplySubscribedNotification = {
 export enum ActivitySort {
   Id = 'ID',
   IdDesc = 'ID_DESC',
-  Pinned = 'PINNED'
+  Pinned = 'PINNED',
 }
 
 /** Activity type enum. */
@@ -191,7 +190,7 @@ export enum ActivityType {
   /** A text message activity sent to another user */
   Message = 'MESSAGE',
   /** A text activity */
-  Text = 'TEXT'
+  Text = 'TEXT',
 }
 
 /** Activity union type */
@@ -275,7 +274,7 @@ export enum AiringSort {
   MediaId = 'MEDIA_ID',
   MediaIdDesc = 'MEDIA_ID_DESC',
   Time = 'TIME',
-  TimeDesc = 'TIME_DESC'
+  TimeDesc = 'TIME_DESC',
 }
 
 export type AniChartHighlightInput = {
@@ -325,12 +324,10 @@ export type Character = {
   updatedAt?: Maybe<Scalars['Int']>;
 };
 
-
 /** A character that features in an anime or manga */
 export type CharacterDescriptionArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** A character that features in an anime or manga */
 export type CharacterMediaArgs = {
@@ -369,13 +366,11 @@ export type CharacterEdge = {
   voiceActors?: Maybe<Array<Maybe<Staff>>>;
 };
 
-
 /** Character connection edge */
 export type CharacterEdgeVoiceActorRolesArgs = {
   language?: InputMaybe<StaffLanguage>;
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
-
 
 /** Character connection edge */
 export type CharacterEdgeVoiceActorsArgs = {
@@ -435,7 +430,7 @@ export enum CharacterRole {
   /** A primary character role in the media */
   Main = 'MAIN',
   /** A supporting character role in the media */
-  Supporting = 'SUPPORTING'
+  Supporting = 'SUPPORTING',
 }
 
 /** Character sort enums */
@@ -448,7 +443,7 @@ export enum CharacterSort {
   Relevance = 'RELEVANCE',
   Role = 'ROLE',
   RoleDesc = 'ROLE_DESC',
-  SearchMatch = 'SEARCH_MATCH'
+  SearchMatch = 'SEARCH_MATCH',
 }
 
 /** A submission for a character that features in an anime or manga */
@@ -504,13 +499,13 @@ export type Deleted = {
 export enum ExternalLinkMediaType {
   Anime = 'ANIME',
   Manga = 'MANGA',
-  Staff = 'STAFF'
+  Staff = 'STAFF',
 }
 
 export enum ExternalLinkType {
   Info = 'INFO',
   Social = 'SOCIAL',
-  Streaming = 'STREAMING'
+  Streaming = 'STREAMING',
 }
 
 /** User's favourite anime, manga, characters, staff & studios */
@@ -528,13 +523,11 @@ export type Favourites = {
   studios?: Maybe<StudioConnection>;
 };
 
-
 /** User's favourite anime, manga, characters, staff & studios */
 export type FavouritesAnimeArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** User's favourite anime, manga, characters, staff & studios */
 export type FavouritesCharactersArgs = {
@@ -542,20 +535,17 @@ export type FavouritesCharactersArgs = {
   perPage?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** User's favourite anime, manga, characters, staff & studios */
 export type FavouritesMangaArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** User's favourite anime, manga, characters, staff & studios */
 export type FavouritesStaffArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** User's favourite anime, manga, characters, staff & studios */
 export type FavouritesStudiosArgs = {
@@ -650,7 +640,6 @@ export type InternalPage = {
   users?: Maybe<Array<Maybe<User>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageActivitiesArgs = {
   createdAt?: InputMaybe<Scalars['Int']>;
@@ -682,13 +671,11 @@ export type InternalPageActivitiesArgs = {
   userId_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageActivityRepliesArgs = {
   activityId?: InputMaybe<Scalars['Int']>;
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageAiringSchedulesArgs = {
@@ -713,7 +700,6 @@ export type InternalPageAiringSchedulesArgs = {
   sort?: InputMaybe<Array<InputMaybe<AiringSort>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageCharacterSubmissionsArgs = {
   assigneeId?: InputMaybe<Scalars['Int']>;
@@ -722,7 +708,6 @@ export type InternalPageCharacterSubmissionsArgs = {
   status?: InputMaybe<SubmissionStatus>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageCharactersArgs = {
@@ -735,13 +720,11 @@ export type InternalPageCharactersArgs = {
   sort?: InputMaybe<Array<InputMaybe<CharacterSort>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageFollowersArgs = {
   sort?: InputMaybe<Array<InputMaybe<UserSort>>>;
   userId: Scalars['Int'];
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageFollowingArgs = {
@@ -749,13 +732,11 @@ export type InternalPageFollowingArgs = {
   userId: Scalars['Int'];
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageLikesArgs = {
   likeableId?: InputMaybe<Scalars['Int']>;
   type?: InputMaybe<LikeableType>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageMediaArgs = {
@@ -830,7 +811,6 @@ export type InternalPageMediaArgs = {
   volumes_lesser?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageMediaListArgs = {
   compareWithAuthList?: InputMaybe<Scalars['Boolean']>;
@@ -860,7 +840,6 @@ export type InternalPageMediaListArgs = {
   userName?: InputMaybe<Scalars['String']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageMediaSubmissionsArgs = {
   assigneeId?: InputMaybe<Scalars['Int']>;
@@ -871,7 +850,6 @@ export type InternalPageMediaSubmissionsArgs = {
   type?: InputMaybe<MediaType>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageMediaTrendsArgs = {
@@ -902,13 +880,11 @@ export type InternalPageMediaTrendsArgs = {
   trending_not?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageModActionsArgs = {
   modId?: InputMaybe<Scalars['Int']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageNotificationsArgs = {
@@ -916,7 +892,6 @@ export type InternalPageNotificationsArgs = {
   type?: InputMaybe<NotificationType>;
   type_in?: InputMaybe<Array<InputMaybe<NotificationType>>>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageRecommendationsArgs = {
@@ -931,13 +906,11 @@ export type InternalPageRecommendationsArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageReportsArgs = {
   reportedId?: InputMaybe<Scalars['Int']>;
   reporterId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageReviewsArgs = {
@@ -948,7 +921,6 @@ export type InternalPageReviewsArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageRevisionHistoryArgs = {
   characterId?: InputMaybe<Scalars['Int']>;
@@ -957,7 +929,6 @@ export type InternalPageRevisionHistoryArgs = {
   studioId?: InputMaybe<Scalars['Int']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageStaffArgs = {
@@ -970,7 +941,6 @@ export type InternalPageStaffArgs = {
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageStaffSubmissionsArgs = {
   assigneeId?: InputMaybe<Scalars['Int']>;
@@ -979,7 +949,6 @@ export type InternalPageStaffSubmissionsArgs = {
   status?: InputMaybe<SubmissionStatus>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageStudiosArgs = {
@@ -991,7 +960,6 @@ export type InternalPageStudiosArgs = {
   sort?: InputMaybe<Array<InputMaybe<StudioSort>>>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageThreadCommentsArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -999,7 +967,6 @@ export type InternalPageThreadCommentsArgs = {
   threadId?: InputMaybe<Scalars['Int']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageThreadsArgs = {
@@ -1014,12 +981,10 @@ export type InternalPageThreadsArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data (Used for internal use only) */
 export type InternalPageUserBlockSearchArgs = {
   search?: InputMaybe<Scalars['String']>;
 };
-
 
 /** Page of data (Used for internal use only) */
 export type InternalPageUsersArgs = {
@@ -1035,7 +1000,7 @@ export enum LikeableType {
   Activity = 'ACTIVITY',
   ActivityReply = 'ACTIVITY_REPLY',
   Thread = 'THREAD',
-  ThreadComment = 'THREAD_COMMENT'
+  ThreadComment = 'THREAD_COMMENT',
 }
 
 /** Likeable union type */
@@ -1215,14 +1180,12 @@ export type Media = {
   volumes?: Maybe<Scalars['Int']>;
 };
 
-
 /** Anime or Manga */
 export type MediaAiringScheduleArgs = {
   notYetAired?: InputMaybe<Scalars['Boolean']>;
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Anime or Manga */
 export type MediaCharactersArgs = {
@@ -1232,12 +1195,10 @@ export type MediaCharactersArgs = {
   sort?: InputMaybe<Array<InputMaybe<CharacterSort>>>;
 };
 
-
 /** Anime or Manga */
 export type MediaDescriptionArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** Anime or Manga */
 export type MediaRecommendationsArgs = {
@@ -1245,7 +1206,6 @@ export type MediaRecommendationsArgs = {
   perPage?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<RecommendationSort>>>;
 };
-
 
 /** Anime or Manga */
 export type MediaReviewsArgs = {
@@ -1255,12 +1215,10 @@ export type MediaReviewsArgs = {
   sort?: InputMaybe<Array<InputMaybe<ReviewSort>>>;
 };
 
-
 /** Anime or Manga */
 export type MediaSourceArgs = {
   version?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Anime or Manga */
 export type MediaStaffArgs = {
@@ -1269,19 +1227,16 @@ export type MediaStaffArgs = {
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
 
-
 /** Anime or Manga */
 export type MediaStatusArgs = {
   version?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Anime or Manga */
 export type MediaStudiosArgs = {
   isMain?: InputMaybe<Scalars['Boolean']>;
   sort?: InputMaybe<Array<InputMaybe<StudioSort>>>;
 };
-
 
 /** Anime or Manga */
 export type MediaTrendsArgs = {
@@ -1394,19 +1349,16 @@ export type MediaEdge = {
   voiceActors?: Maybe<Array<Maybe<Staff>>>;
 };
 
-
 /** Media connection edge */
 export type MediaEdgeRelationTypeArgs = {
   version?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Media connection edge */
 export type MediaEdgeVoiceActorRolesArgs = {
   language?: InputMaybe<StaffLanguage>;
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
-
 
 /** Media connection edge */
 export type MediaEdgeVoiceActorsArgs = {
@@ -1466,7 +1418,7 @@ export enum MediaFormat {
   /** Anime broadcast on television */
   Tv = 'TV',
   /** Anime which are under 15 minutes in length and broadcast on television */
-  TvShort = 'TV_SHORT'
+  TvShort = 'TV_SHORT',
 }
 
 /** List of anime or manga */
@@ -1512,12 +1464,10 @@ export type MediaList = {
   userId: Scalars['Int'];
 };
 
-
 /** List of anime or manga */
 export type MediaListCustomListsArgs = {
   asArray?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** List of anime or manga */
 export type MediaListScoreArgs = {
@@ -1545,12 +1495,10 @@ export type MediaListCollection = {
   user?: Maybe<User>;
 };
 
-
 /** List of anime or manga */
 export type MediaListCollectionCustomListsArgs = {
   asArray?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** List of anime or manga */
 export type MediaListCollectionStatusListsArgs = {
@@ -1640,7 +1588,7 @@ export enum MediaListSort {
   Status = 'STATUS',
   StatusDesc = 'STATUS_DESC',
   UpdatedTime = 'UPDATED_TIME',
-  UpdatedTimeDesc = 'UPDATED_TIME_DESC'
+  UpdatedTimeDesc = 'UPDATED_TIME_DESC',
 }
 
 /** Media list watching/reading status enum. */
@@ -1656,7 +1604,7 @@ export enum MediaListStatus {
   /** Planning to watch/read */
   Planning = 'PLANNING',
   /** Re-watching/reading */
-  Repeating = 'REPEATING'
+  Repeating = 'REPEATING',
 }
 
 /** A user's list options for anime or manga lists */
@@ -1726,7 +1674,7 @@ export enum MediaRankType {
   /** Ranking is based on the media's popularity */
   Popular = 'POPULAR',
   /** Ranking is based on the media's ratings/score */
-  Rated = 'RATED'
+  Rated = 'RATED',
 }
 
 /** Type of relation media has to its parent. */
@@ -1756,7 +1704,7 @@ export enum MediaRelation {
   /** An alternative version of the media with a different primary focus */
   SpinOff = 'SPIN_OFF',
   /** A shortened and summarized version */
-  Summary = 'SUMMARY'
+  Summary = 'SUMMARY',
 }
 
 export enum MediaSeason {
@@ -1767,7 +1715,7 @@ export enum MediaSeason {
   /** Months June to August */
   Summer = 'SUMMER',
   /** Months December to February */
-  Winter = 'WINTER'
+  Winter = 'WINTER',
 }
 
 /** Media sort enums */
@@ -1808,7 +1756,7 @@ export enum MediaSort {
   UpdatedAt = 'UPDATED_AT',
   UpdatedAtDesc = 'UPDATED_AT_DESC',
   Volumes = 'VOLUMES',
-  VolumesDesc = 'VOLUMES_DESC'
+  VolumesDesc = 'VOLUMES_DESC',
 }
 
 /** Source type the media was adapted from */
@@ -1842,7 +1790,7 @@ export enum MediaSource {
   /** Video game driven primary by text and narrative */
   VisualNovel = 'VISUAL_NOVEL',
   /** Version 3 only. Written works published online */
-  WebNovel = 'WEB_NOVEL'
+  WebNovel = 'WEB_NOVEL',
 }
 
 /** A media's statistics */
@@ -1865,7 +1813,7 @@ export enum MediaStatus {
   /** To be released at a later date */
   NotYetReleased = 'NOT_YET_RELEASED',
   /** Currently releasing */
-  Releasing = 'RELEASING'
+  Releasing = 'RELEASING',
 }
 
 /** Data and links to legal streaming episodes on external sites */
@@ -1975,18 +1923,15 @@ export type MediaTitle = {
   userPreferred?: Maybe<Scalars['String']>;
 };
 
-
 /** The official titles of the media in various languages */
 export type MediaTitleEnglishArgs = {
   stylised?: InputMaybe<Scalars['Boolean']>;
 };
 
-
 /** The official titles of the media in various languages */
 export type MediaTitleNativeArgs = {
   stylised?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** The official titles of the media in various languages */
 export type MediaTitleRomajiArgs = {
@@ -2066,7 +2011,7 @@ export enum MediaTrendSort {
   Score = 'SCORE',
   ScoreDesc = 'SCORE_DESC',
   Trending = 'TRENDING',
-  TrendingDesc = 'TRENDING_DESC'
+  TrendingDesc = 'TRENDING_DESC',
 }
 
 /** Media type enum, anime or manga. */
@@ -2074,7 +2019,7 @@ export enum MediaType {
   /** Japanese Anime */
   Anime = 'ANIME',
   /** Asian comic */
-  Manga = 'MANGA'
+  Manga = 'MANGA',
 }
 
 /** User message activity */
@@ -2116,7 +2061,6 @@ export type MessageActivity = {
   type?: Maybe<ActivityType>;
 };
 
-
 /** User message activity */
 export type MessageActivityMessageArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
@@ -2143,7 +2087,7 @@ export enum ModActionType {
   Expire = 'EXPIRE',
   Note = 'NOTE',
   Report = 'REPORT',
-  Reset = 'RESET'
+  Reset = 'RESET',
 }
 
 /** Mod role enums */
@@ -2173,7 +2117,7 @@ export enum ModRole {
   /** A retired moderator */
   Retired = 'RETIRED',
   /** A social media moderator */
-  SocialMedia = 'SOCIAL_MEDIA'
+  SocialMedia = 'SOCIAL_MEDIA',
 }
 
 export type Mutation = {
@@ -2238,48 +2182,39 @@ export type Mutation = {
   UpdateUser?: Maybe<User>;
 };
 
-
 export type MutationDeleteActivityArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationDeleteActivityReplyArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type MutationDeleteCustomListArgs = {
   customList?: InputMaybe<Scalars['String']>;
   type?: InputMaybe<MediaType>;
 };
 
-
 export type MutationDeleteMediaListEntryArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type MutationDeleteReviewArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationDeleteThreadArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type MutationDeleteThreadCommentArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationRateReviewArgs = {
   rating?: InputMaybe<ReviewRating>;
   reviewId?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type MutationSaveActivityReplyArgs = {
   activityId?: InputMaybe<Scalars['Int']>;
@@ -2288,12 +2223,10 @@ export type MutationSaveActivityReplyArgs = {
   text?: InputMaybe<Scalars['String']>;
 };
 
-
 export type MutationSaveListActivityArgs = {
   id?: InputMaybe<Scalars['Int']>;
   locked?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 export type MutationSaveMediaListEntryArgs = {
   advancedScores?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
@@ -2314,7 +2247,6 @@ export type MutationSaveMediaListEntryArgs = {
   status?: InputMaybe<MediaListStatus>;
 };
 
-
 export type MutationSaveMessageActivityArgs = {
   asMod?: InputMaybe<Scalars['Boolean']>;
   id?: InputMaybe<Scalars['Int']>;
@@ -2324,13 +2256,11 @@ export type MutationSaveMessageActivityArgs = {
   recipientId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationSaveRecommendationArgs = {
   mediaId?: InputMaybe<Scalars['Int']>;
   mediaRecommendationId?: InputMaybe<Scalars['Int']>;
   rating?: InputMaybe<RecommendationRating>;
 };
-
 
 export type MutationSaveReviewArgs = {
   body?: InputMaybe<Scalars['String']>;
@@ -2341,13 +2271,11 @@ export type MutationSaveReviewArgs = {
   summary?: InputMaybe<Scalars['String']>;
 };
 
-
 export type MutationSaveTextActivityArgs = {
   id?: InputMaybe<Scalars['Int']>;
   locked?: InputMaybe<Scalars['Boolean']>;
   text?: InputMaybe<Scalars['String']>;
 };
-
 
 export type MutationSaveThreadArgs = {
   body?: InputMaybe<Scalars['String']>;
@@ -2359,7 +2287,6 @@ export type MutationSaveThreadArgs = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-
 export type MutationSaveThreadCommentArgs = {
   comment?: InputMaybe<Scalars['String']>;
   id?: InputMaybe<Scalars['Int']>;
@@ -2368,18 +2295,15 @@ export type MutationSaveThreadCommentArgs = {
   threadId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationToggleActivityPinArgs = {
   id?: InputMaybe<Scalars['Int']>;
   pinned?: InputMaybe<Scalars['Boolean']>;
 };
 
-
 export type MutationToggleActivitySubscriptionArgs = {
   activityId?: InputMaybe<Scalars['Int']>;
   subscribe?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 export type MutationToggleFavouriteArgs = {
   animeId?: InputMaybe<Scalars['Int']>;
@@ -2389,34 +2313,28 @@ export type MutationToggleFavouriteArgs = {
   studioId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationToggleFollowArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type MutationToggleLikeArgs = {
   id?: InputMaybe<Scalars['Int']>;
   type?: InputMaybe<LikeableType>;
 };
 
-
 export type MutationToggleLikeV2Args = {
   id?: InputMaybe<Scalars['Int']>;
   type?: InputMaybe<LikeableType>;
 };
-
 
 export type MutationToggleThreadSubscriptionArgs = {
   subscribe?: InputMaybe<Scalars['Boolean']>;
   threadId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationUpdateAniChartHighlightsArgs = {
   highlights?: InputMaybe<Array<InputMaybe<AniChartHighlightInput>>>;
 };
-
 
 export type MutationUpdateAniChartSettingsArgs = {
   outgoingLinkProvider?: InputMaybe<Scalars['String']>;
@@ -2424,7 +2342,6 @@ export type MutationUpdateAniChartSettingsArgs = {
   theme?: InputMaybe<Scalars['String']>;
   titleLanguage?: InputMaybe<Scalars['String']>;
 };
-
 
 export type MutationUpdateFavouriteOrderArgs = {
   animeIds?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
@@ -2438,7 +2355,6 @@ export type MutationUpdateFavouriteOrderArgs = {
   studioIds?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
   studioOrder?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
-
 
 export type MutationUpdateMediaListEntriesArgs = {
   advancedScores?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
@@ -2456,7 +2372,6 @@ export type MutationUpdateMediaListEntriesArgs = {
   startedAt?: InputMaybe<FuzzyDateInput>;
   status?: InputMaybe<MediaListStatus>;
 };
-
 
 export type MutationUpdateUserArgs = {
   about?: InputMaybe<Scalars['String']>;
@@ -2529,11 +2444,28 @@ export enum NotificationType {
   /** A user has liked your forum thread */
   ThreadLike = 'THREAD_LIKE',
   /** A user has commented in one of your subscribed forum threads */
-  ThreadSubscribed = 'THREAD_SUBSCRIBED'
+  ThreadSubscribed = 'THREAD_SUBSCRIBED',
 }
 
 /** Notification union type */
-export type NotificationUnion = ActivityLikeNotification | ActivityMentionNotification | ActivityMessageNotification | ActivityReplyLikeNotification | ActivityReplyNotification | ActivityReplySubscribedNotification | AiringNotification | FollowingNotification | MediaDataChangeNotification | MediaDeletionNotification | MediaMergeNotification | RelatedMediaAdditionNotification | ThreadCommentLikeNotification | ThreadCommentMentionNotification | ThreadCommentReplyNotification | ThreadCommentSubscribedNotification | ThreadLikeNotification;
+export type NotificationUnion =
+  | ActivityLikeNotification
+  | ActivityMentionNotification
+  | ActivityMessageNotification
+  | ActivityReplyLikeNotification
+  | ActivityReplyNotification
+  | ActivityReplySubscribedNotification
+  | AiringNotification
+  | FollowingNotification
+  | MediaDataChangeNotification
+  | MediaDeletionNotification
+  | MediaMergeNotification
+  | RelatedMediaAdditionNotification
+  | ThreadCommentLikeNotification
+  | ThreadCommentMentionNotification
+  | ThreadCommentReplyNotification
+  | ThreadCommentSubscribedNotification
+  | ThreadLikeNotification;
 
 /** Page of data */
 export type Page = {
@@ -2559,7 +2491,6 @@ export type Page = {
   threads?: Maybe<Array<Maybe<Thread>>>;
   users?: Maybe<Array<Maybe<User>>>;
 };
-
 
 /** Page of data */
 export type PageActivitiesArgs = {
@@ -2592,13 +2523,11 @@ export type PageActivitiesArgs = {
   userId_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
 
-
 /** Page of data */
 export type PageActivityRepliesArgs = {
   activityId?: InputMaybe<Scalars['Int']>;
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data */
 export type PageAiringSchedulesArgs = {
@@ -2623,7 +2552,6 @@ export type PageAiringSchedulesArgs = {
   sort?: InputMaybe<Array<InputMaybe<AiringSort>>>;
 };
 
-
 /** Page of data */
 export type PageCharactersArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -2635,13 +2563,11 @@ export type PageCharactersArgs = {
   sort?: InputMaybe<Array<InputMaybe<CharacterSort>>>;
 };
 
-
 /** Page of data */
 export type PageFollowersArgs = {
   sort?: InputMaybe<Array<InputMaybe<UserSort>>>;
   userId: Scalars['Int'];
 };
-
 
 /** Page of data */
 export type PageFollowingArgs = {
@@ -2649,13 +2575,11 @@ export type PageFollowingArgs = {
   userId: Scalars['Int'];
 };
 
-
 /** Page of data */
 export type PageLikesArgs = {
   likeableId?: InputMaybe<Scalars['Int']>;
   type?: InputMaybe<LikeableType>;
 };
-
 
 /** Page of data */
 export type PageMediaArgs = {
@@ -2730,7 +2654,6 @@ export type PageMediaArgs = {
   volumes_lesser?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data */
 export type PageMediaListArgs = {
   compareWithAuthList?: InputMaybe<Scalars['Boolean']>;
@@ -2759,7 +2682,6 @@ export type PageMediaListArgs = {
   userId_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
   userName?: InputMaybe<Scalars['String']>;
 };
-
 
 /** Page of data */
 export type PageMediaTrendsArgs = {
@@ -2790,14 +2712,12 @@ export type PageMediaTrendsArgs = {
   trending_not?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data */
 export type PageNotificationsArgs = {
   resetNotificationCount?: InputMaybe<Scalars['Boolean']>;
   type?: InputMaybe<NotificationType>;
   type_in?: InputMaybe<Array<InputMaybe<NotificationType>>>;
 };
-
 
 /** Page of data */
 export type PageRecommendationsArgs = {
@@ -2812,7 +2732,6 @@ export type PageRecommendationsArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 /** Page of data */
 export type PageReviewsArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -2821,7 +2740,6 @@ export type PageReviewsArgs = {
   sort?: InputMaybe<Array<InputMaybe<ReviewSort>>>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data */
 export type PageStaffArgs = {
@@ -2834,7 +2752,6 @@ export type PageStaffArgs = {
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
 
-
 /** Page of data */
 export type PageStudiosArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -2845,7 +2762,6 @@ export type PageStudiosArgs = {
   sort?: InputMaybe<Array<InputMaybe<StudioSort>>>;
 };
 
-
 /** Page of data */
 export type PageThreadCommentsArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -2853,7 +2769,6 @@ export type PageThreadCommentsArgs = {
   threadId?: InputMaybe<Scalars['Int']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data */
 export type PageThreadsArgs = {
@@ -2867,7 +2782,6 @@ export type PageThreadsArgs = {
   subscribed?: InputMaybe<Scalars['Boolean']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 /** Page of data */
 export type PageUsersArgs = {
@@ -2955,7 +2869,6 @@ export type Query = {
   Viewer?: Maybe<User>;
 };
 
-
 export type QueryActivityArgs = {
   createdAt?: InputMaybe<Scalars['Int']>;
   createdAt_greater?: InputMaybe<Scalars['Int']>;
@@ -2986,12 +2899,10 @@ export type QueryActivityArgs = {
   userId_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
 };
 
-
 export type QueryActivityReplyArgs = {
   activityId?: InputMaybe<Scalars['Int']>;
   id?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryAiringScheduleArgs = {
   airingAt?: InputMaybe<Scalars['Int']>;
@@ -3015,7 +2926,6 @@ export type QueryAiringScheduleArgs = {
   sort?: InputMaybe<Array<InputMaybe<AiringSort>>>;
 };
 
-
 export type QueryCharacterArgs = {
   id?: InputMaybe<Scalars['Int']>;
   id_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
@@ -3026,36 +2936,30 @@ export type QueryCharacterArgs = {
   sort?: InputMaybe<Array<InputMaybe<CharacterSort>>>;
 };
 
-
 export type QueryExternalLinkSourceCollectionArgs = {
   id?: InputMaybe<Scalars['Int']>;
   mediaType?: InputMaybe<ExternalLinkMediaType>;
   type?: InputMaybe<ExternalLinkType>;
 };
 
-
 export type QueryFollowerArgs = {
   sort?: InputMaybe<Array<InputMaybe<UserSort>>>;
   userId: Scalars['Int'];
 };
-
 
 export type QueryFollowingArgs = {
   sort?: InputMaybe<Array<InputMaybe<UserSort>>>;
   userId: Scalars['Int'];
 };
 
-
 export type QueryLikeArgs = {
   likeableId?: InputMaybe<Scalars['Int']>;
   type?: InputMaybe<LikeableType>;
 };
 
-
 export type QueryMarkdownArgs = {
   markdown: Scalars['String'];
 };
-
 
 export type QueryMediaArgs = {
   averageScore?: InputMaybe<Scalars['Int']>;
@@ -3129,7 +3033,6 @@ export type QueryMediaArgs = {
   volumes_lesser?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryMediaListArgs = {
   compareWithAuthList?: InputMaybe<Scalars['Boolean']>;
   completedAt?: InputMaybe<Scalars['FuzzyDateInt']>;
@@ -3158,7 +3061,6 @@ export type QueryMediaListArgs = {
   userName?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryMediaListCollectionArgs = {
   chunk?: InputMaybe<Scalars['Int']>;
   completedAt?: InputMaybe<Scalars['FuzzyDateInt']>;
@@ -3183,11 +3085,9 @@ export type QueryMediaListCollectionArgs = {
   userName?: InputMaybe<Scalars['String']>;
 };
 
-
 export type QueryMediaTagCollectionArgs = {
   status?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryMediaTrendArgs = {
   averageScore?: InputMaybe<Scalars['Int']>;
@@ -3217,19 +3117,16 @@ export type QueryMediaTrendArgs = {
   trending_not?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryNotificationArgs = {
   resetNotificationCount?: InputMaybe<Scalars['Boolean']>;
   type?: InputMaybe<NotificationType>;
   type_in?: InputMaybe<Array<InputMaybe<NotificationType>>>;
 };
 
-
 export type QueryPageArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryRecommendationArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -3243,7 +3140,6 @@ export type QueryRecommendationArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryReviewArgs = {
   id?: InputMaybe<Scalars['Int']>;
   mediaId?: InputMaybe<Scalars['Int']>;
@@ -3251,7 +3147,6 @@ export type QueryReviewArgs = {
   sort?: InputMaybe<Array<InputMaybe<ReviewSort>>>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryStaffArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -3263,7 +3158,6 @@ export type QueryStaffArgs = {
   sort?: InputMaybe<Array<InputMaybe<StaffSort>>>;
 };
 
-
 export type QueryStudioArgs = {
   id?: InputMaybe<Scalars['Int']>;
   id_in?: InputMaybe<Array<InputMaybe<Scalars['Int']>>>;
@@ -3272,7 +3166,6 @@ export type QueryStudioArgs = {
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<Array<InputMaybe<StudioSort>>>;
 };
-
 
 export type QueryThreadArgs = {
   categoryId?: InputMaybe<Scalars['Int']>;
@@ -3286,14 +3179,12 @@ export type QueryThreadArgs = {
   userId?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type QueryThreadCommentArgs = {
   id?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<ThreadCommentSort>>>;
   threadId?: InputMaybe<Scalars['Int']>;
   userId?: InputMaybe<Scalars['Int']>;
 };
-
 
 export type QueryUserArgs = {
   id?: InputMaybe<Scalars['Int']>;
@@ -3338,7 +3229,7 @@ export type RecommendationEdge = {
 export enum RecommendationRating {
   NoRating = 'NO_RATING',
   RateDown = 'RATE_DOWN',
-  RateUp = 'RATE_UP'
+  RateUp = 'RATE_UP',
 }
 
 /** Recommendation sort enums */
@@ -3346,7 +3237,7 @@ export enum RecommendationSort {
   Id = 'ID',
   IdDesc = 'ID_DESC',
   Rating = 'RATING',
-  RatingDesc = 'RATING_DESC'
+  RatingDesc = 'RATING_DESC',
 }
 
 /** Notification for when new media is added to the site */
@@ -3414,7 +3305,6 @@ export type Review = {
   userRating?: Maybe<ReviewRating>;
 };
 
-
 /** A Review that features in an anime or manga */
 export type ReviewBodyArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
@@ -3438,7 +3328,7 @@ export type ReviewEdge = {
 export enum ReviewRating {
   DownVote = 'DOWN_VOTE',
   NoVote = 'NO_VOTE',
-  UpVote = 'UP_VOTE'
+  UpVote = 'UP_VOTE',
 }
 
 /** Review sort enums */
@@ -3452,7 +3342,7 @@ export enum ReviewSort {
   Score = 'SCORE',
   ScoreDesc = 'SCORE_DESC',
   UpdatedAt = 'UPDATED_AT',
-  UpdatedAtDesc = 'UPDATED_AT_DESC'
+  UpdatedAtDesc = 'UPDATED_AT_DESC',
 }
 
 /** Feed of mod edit activity */
@@ -3483,7 +3373,7 @@ export type RevisionHistory = {
 /** Revision history actions */
 export enum RevisionHistoryAction {
   Create = 'CREATE',
-  Edit = 'EDIT'
+  Edit = 'EDIT',
 }
 
 /** A user's list score distribution. */
@@ -3505,7 +3395,7 @@ export enum ScoreFormat {
   /** A float from 0-10 with 1 decimal place */
   Point_10Decimal = 'POINT_10_DECIMAL',
   /** An integer from 0-100 */
-  Point_100 = 'POINT_100'
+  Point_100 = 'POINT_100',
 }
 
 export type SiteStatistics = {
@@ -3519,13 +3409,11 @@ export type SiteStatistics = {
   users?: Maybe<SiteTrendConnection>;
 };
 
-
 export type SiteStatisticsAnimeArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
-
 
 export type SiteStatisticsCharactersArgs = {
   page?: InputMaybe<Scalars['Int']>;
@@ -3533,13 +3421,11 @@ export type SiteStatisticsCharactersArgs = {
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
 
-
 export type SiteStatisticsMangaArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
-
 
 export type SiteStatisticsReviewsArgs = {
   page?: InputMaybe<Scalars['Int']>;
@@ -3547,20 +3433,17 @@ export type SiteStatisticsReviewsArgs = {
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
 
-
 export type SiteStatisticsStaffArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
 
-
 export type SiteStatisticsStudiosArgs = {
   page?: InputMaybe<Scalars['Int']>;
   perPage?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<SiteTrendSort>>>;
 };
-
 
 export type SiteStatisticsUsersArgs = {
   page?: InputMaybe<Scalars['Int']>;
@@ -3599,7 +3482,7 @@ export enum SiteTrendSort {
   Count = 'COUNT',
   CountDesc = 'COUNT_DESC',
   Date = 'DATE',
-  DateDesc = 'DATE_DESC'
+  DateDesc = 'DATE_DESC',
 }
 
 /** Voice actors or production staff */
@@ -3662,7 +3545,6 @@ export type Staff = {
   yearsActive?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
-
 /** Voice actors or production staff */
 export type StaffCharacterMediaArgs = {
   onList?: InputMaybe<Scalars['Boolean']>;
@@ -3671,7 +3553,6 @@ export type StaffCharacterMediaArgs = {
   sort?: InputMaybe<Array<InputMaybe<MediaSort>>>;
 };
 
-
 /** Voice actors or production staff */
 export type StaffCharactersArgs = {
   page?: InputMaybe<Scalars['Int']>;
@@ -3679,12 +3560,10 @@ export type StaffCharactersArgs = {
   sort?: InputMaybe<Array<InputMaybe<CharacterSort>>>;
 };
 
-
 /** Voice actors or production staff */
 export type StaffDescriptionArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** Voice actors or production staff */
 export type StaffStaffMediaArgs = {
@@ -3744,7 +3623,7 @@ export enum StaffLanguage {
   /** Portuguese */
   Portuguese = 'PORTUGUESE',
   /** Spanish */
-  Spanish = 'SPANISH'
+  Spanish = 'SPANISH',
 }
 
 /** The names of the staff member */
@@ -3803,7 +3682,7 @@ export enum StaffSort {
   Relevance = 'RELEVANCE',
   Role = 'ROLE',
   RoleDesc = 'ROLE_DESC',
-  SearchMatch = 'SEARCH_MATCH'
+  SearchMatch = 'SEARCH_MATCH',
 }
 
 /** User's staff statistics */
@@ -3867,7 +3746,6 @@ export type Studio = {
   siteUrl?: Maybe<Scalars['String']>;
 };
 
-
 /** Animation or production company */
 export type StudioMediaArgs = {
   isMain?: InputMaybe<Scalars['Boolean']>;
@@ -3905,7 +3783,7 @@ export enum StudioSort {
   IdDesc = 'ID_DESC',
   Name = 'NAME',
   NameDesc = 'NAME_DESC',
-  SearchMatch = 'SEARCH_MATCH'
+  SearchMatch = 'SEARCH_MATCH',
 }
 
 /** User's studio statistics */
@@ -3921,7 +3799,7 @@ export type StudioStats = {
 /** Submission sort enums */
 export enum SubmissionSort {
   Id = 'ID',
-  IdDesc = 'ID_DESC'
+  IdDesc = 'ID_DESC',
 }
 
 /** Submission status */
@@ -3929,7 +3807,7 @@ export enum SubmissionStatus {
   Accepted = 'ACCEPTED',
   PartiallyAccepted = 'PARTIALLY_ACCEPTED',
   Pending = 'PENDING',
-  Rejected = 'REJECTED'
+  Rejected = 'REJECTED',
 }
 
 /** User's tag statistics */
@@ -3976,7 +3854,6 @@ export type TextActivity = {
   /** The user id of the activity's creator */
   userId?: Maybe<Scalars['Int']>;
 };
-
 
 /** User text activity */
 export type TextActivityTextArgs = {
@@ -4032,7 +3909,6 @@ export type Thread = {
   viewCount?: Maybe<Scalars['Int']>;
 };
 
-
 /** Forum Thread */
 export type ThreadBodyArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
@@ -4079,7 +3955,6 @@ export type ThreadComment = {
   /** The user id of the comment's owner */
   userId?: Maybe<Scalars['Int']>;
 };
-
 
 /** Forum Thread Comment */
 export type ThreadCommentCommentArgs = {
@@ -4158,7 +4033,7 @@ export type ThreadCommentReplyNotification = {
 /** Thread comments sort enums */
 export enum ThreadCommentSort {
   Id = 'ID',
-  IdDesc = 'ID_DESC'
+  IdDesc = 'ID_DESC',
 }
 
 /** Notification for when a user replies to a subscribed forum thread */
@@ -4224,7 +4099,7 @@ export enum ThreadSort {
   UpdatedAt = 'UPDATED_AT',
   UpdatedAtDesc = 'UPDATED_AT_DESC',
   ViewCount = 'VIEW_COUNT',
-  ViewCountDesc = 'VIEW_COUNT_DESC'
+  ViewCountDesc = 'VIEW_COUNT_DESC',
 }
 
 /** A user */
@@ -4283,12 +4158,10 @@ export type User = {
   updatedAt?: Maybe<Scalars['Int']>;
 };
 
-
 /** A user */
 export type UserAboutArgs = {
   asHtml?: InputMaybe<Scalars['Boolean']>;
 };
-
 
 /** A user */
 export type UserFavouritesArgs = {
@@ -4432,7 +4305,7 @@ export enum UserSort {
   Username = 'USERNAME',
   UsernameDesc = 'USERNAME_DESC',
   WatchedTime = 'WATCHED_TIME',
-  WatchedTimeDesc = 'WATCHED_TIME_DESC'
+  WatchedTimeDesc = 'WATCHED_TIME_DESC',
 }
 
 /** The language the user wants to see staff and character names in */
@@ -4442,7 +4315,7 @@ export enum UserStaffNameLanguage {
   /** The romanization of the staff or character's native name */
   Romaji = 'ROMAJI',
   /** The romanization of the staff or character's native name, with western name ordering */
-  RomajiWestern = 'ROMAJI_WESTERN'
+  RomajiWestern = 'ROMAJI_WESTERN',
 }
 
 export type UserStaffStatistic = {
@@ -4494,72 +4367,60 @@ export type UserStatistics = {
   volumesRead: Scalars['Int'];
 };
 
-
 export type UserStatisticsCountriesArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsFormatsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
 
-
 export type UserStatisticsGenresArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsLengthsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
 
-
 export type UserStatisticsReleaseYearsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsScoresArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
 
-
 export type UserStatisticsStaffArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsStartYearsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
 
-
 export type UserStatisticsStatusesArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsStudiosArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
 
-
 export type UserStatisticsTagsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<Array<InputMaybe<UserStatisticsSort>>>;
 };
-
 
 export type UserStatisticsVoiceActorsArgs = {
   limit?: InputMaybe<Scalars['Int']>;
@@ -4575,7 +4436,7 @@ export enum UserStatisticsSort {
   MeanScore = 'MEAN_SCORE',
   MeanScoreDesc = 'MEAN_SCORE_DESC',
   Progress = 'PROGRESS',
-  ProgressDesc = 'PROGRESS_DESC'
+  ProgressDesc = 'PROGRESS_DESC',
 }
 
 /** A user's statistics */
@@ -4645,7 +4506,7 @@ export enum UserTitleLanguage {
   /** The romanization of the native language title */
   Romaji = 'ROMAJI',
   /** The romanization of the native language title, stylised by media creator */
-  RomajiStylised = 'ROMAJI_STYLISED'
+  RomajiStylised = 'ROMAJI_STYLISED',
 }
 
 export type UserVoiceActorStatistic = {
@@ -4672,11 +4533,12 @@ export type ResolversObject<TObject> = WithIndex<TObject>;
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
 
-
 export type ResolverWithResolve<TResult, TParent, TContext, TArgs> = {
   resolve: ResolverFn<TResult, TParent, TContext, TArgs>;
 };
-export type Resolver<TResult, TParent = {}, TContext = {}, TArgs = {}> = ResolverFn<TResult, TParent, TContext, TArgs> | ResolverWithResolve<TResult, TParent, TContext, TArgs>;
+export type Resolver<TResult, TParent = {}, TContext = {}, TArgs = {}> =
+  | ResolverFn<TResult, TParent, TContext, TArgs>
+  | ResolverWithResolve<TResult, TParent, TContext, TArgs>;
 
 export type ResolverFn<TResult, TParent, TContext, TArgs> = (
   parent: TParent,
@@ -4723,7 +4585,11 @@ export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
   info: GraphQLResolveInfo
 ) => Maybe<TTypes> | Promise<Maybe<TTypes>>;
 
-export type IsTypeOfResolverFn<T = {}, TContext = {}> = (obj: T, context: TContext, info: GraphQLResolveInfo) => boolean | Promise<boolean>;
+export type IsTypeOfResolverFn<T = {}, TContext = {}> = (
+  obj: T,
+  context: TContext,
+  info: GraphQLResolveInfo
+) => boolean | Promise<boolean>;
 
 export type NextResolverFn<T> = () => Promise<T>;
 
@@ -4737,13 +4603,23 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
-  ActivityLikeNotification: ResolverTypeWrapper<Omit<ActivityLikeNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }>;
-  ActivityMentionNotification: ResolverTypeWrapper<Omit<ActivityMentionNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }>;
+  ActivityLikeNotification: ResolverTypeWrapper<
+    Omit<ActivityLikeNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }
+  >;
+  ActivityMentionNotification: ResolverTypeWrapper<
+    Omit<ActivityMentionNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }
+  >;
   ActivityMessageNotification: ResolverTypeWrapper<ActivityMessageNotification>;
   ActivityReply: ResolverTypeWrapper<ActivityReply>;
-  ActivityReplyLikeNotification: ResolverTypeWrapper<Omit<ActivityReplyLikeNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }>;
-  ActivityReplyNotification: ResolverTypeWrapper<Omit<ActivityReplyNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }>;
-  ActivityReplySubscribedNotification: ResolverTypeWrapper<Omit<ActivityReplySubscribedNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }>;
+  ActivityReplyLikeNotification: ResolverTypeWrapper<
+    Omit<ActivityReplyLikeNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }
+  >;
+  ActivityReplyNotification: ResolverTypeWrapper<
+    Omit<ActivityReplyNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }
+  >;
+  ActivityReplySubscribedNotification: ResolverTypeWrapper<
+    Omit<ActivityReplySubscribedNotification, 'activity'> & { activity?: Maybe<ResolversTypes['ActivityUnion']> }
+  >;
   ActivitySort: ActivitySort;
   ActivityType: ActivityType;
   ActivityUnion: ResolversTypes['ListActivity'] | ResolversTypes['MessageActivity'] | ResolversTypes['TextActivity'];
@@ -4782,10 +4658,21 @@ export type ResolversTypes = ResolversObject<{
   GenreStats: ResolverTypeWrapper<GenreStats>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
-  InternalPage: ResolverTypeWrapper<Omit<InternalPage, 'activities' | 'notifications'> & { activities?: Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>, notifications?: Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>> }>;
+  InternalPage: ResolverTypeWrapper<
+    Omit<InternalPage, 'activities' | 'notifications'> & {
+      activities?: Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>;
+      notifications?: Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>;
+    }
+  >;
   Json: ResolverTypeWrapper<Scalars['Json']>;
   LikeableType: LikeableType;
-  LikeableUnion: ResolversTypes['ActivityReply'] | ResolversTypes['ListActivity'] | ResolversTypes['MessageActivity'] | ResolversTypes['TextActivity'] | ResolversTypes['Thread'] | ResolversTypes['ThreadComment'];
+  LikeableUnion:
+    | ResolversTypes['ActivityReply']
+    | ResolversTypes['ListActivity']
+    | ResolversTypes['MessageActivity']
+    | ResolversTypes['TextActivity']
+    | ResolversTypes['Thread']
+    | ResolversTypes['ThreadComment'];
   ListActivity: ResolverTypeWrapper<ListActivity>;
   ListActivityOption: ResolverTypeWrapper<ListActivityOption>;
   ListActivityOptionInput: ListActivityOptionInput;
@@ -4838,8 +4725,30 @@ export type ResolversTypes = ResolversObject<{
   NotificationOption: ResolverTypeWrapper<NotificationOption>;
   NotificationOptionInput: NotificationOptionInput;
   NotificationType: NotificationType;
-  NotificationUnion: ResolversTypes['ActivityLikeNotification'] | ResolversTypes['ActivityMentionNotification'] | ResolversTypes['ActivityMessageNotification'] | ResolversTypes['ActivityReplyLikeNotification'] | ResolversTypes['ActivityReplyNotification'] | ResolversTypes['ActivityReplySubscribedNotification'] | ResolversTypes['AiringNotification'] | ResolversTypes['FollowingNotification'] | ResolversTypes['MediaDataChangeNotification'] | ResolversTypes['MediaDeletionNotification'] | ResolversTypes['MediaMergeNotification'] | ResolversTypes['RelatedMediaAdditionNotification'] | ResolversTypes['ThreadCommentLikeNotification'] | ResolversTypes['ThreadCommentMentionNotification'] | ResolversTypes['ThreadCommentReplyNotification'] | ResolversTypes['ThreadCommentSubscribedNotification'] | ResolversTypes['ThreadLikeNotification'];
-  Page: ResolverTypeWrapper<Omit<Page, 'activities' | 'notifications'> & { activities?: Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>, notifications?: Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>> }>;
+  NotificationUnion:
+    | ResolversTypes['ActivityLikeNotification']
+    | ResolversTypes['ActivityMentionNotification']
+    | ResolversTypes['ActivityMessageNotification']
+    | ResolversTypes['ActivityReplyLikeNotification']
+    | ResolversTypes['ActivityReplyNotification']
+    | ResolversTypes['ActivityReplySubscribedNotification']
+    | ResolversTypes['AiringNotification']
+    | ResolversTypes['FollowingNotification']
+    | ResolversTypes['MediaDataChangeNotification']
+    | ResolversTypes['MediaDeletionNotification']
+    | ResolversTypes['MediaMergeNotification']
+    | ResolversTypes['RelatedMediaAdditionNotification']
+    | ResolversTypes['ThreadCommentLikeNotification']
+    | ResolversTypes['ThreadCommentMentionNotification']
+    | ResolversTypes['ThreadCommentReplyNotification']
+    | ResolversTypes['ThreadCommentSubscribedNotification']
+    | ResolversTypes['ThreadLikeNotification'];
+  Page: ResolverTypeWrapper<
+    Omit<Page, 'activities' | 'notifications'> & {
+      activities?: Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>;
+      notifications?: Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>;
+    }
+  >;
   PageInfo: ResolverTypeWrapper<PageInfo>;
   ParsedMarkdown: ResolverTypeWrapper<ParsedMarkdown>;
   Query: ResolverTypeWrapper<{}>;
@@ -4926,14 +4835,27 @@ export type ResolversTypes = ResolversObject<{
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
-  ActivityLikeNotification: Omit<ActivityLikeNotification, 'activity'> & { activity?: Maybe<ResolversParentTypes['ActivityUnion']> };
-  ActivityMentionNotification: Omit<ActivityMentionNotification, 'activity'> & { activity?: Maybe<ResolversParentTypes['ActivityUnion']> };
+  ActivityLikeNotification: Omit<ActivityLikeNotification, 'activity'> & {
+    activity?: Maybe<ResolversParentTypes['ActivityUnion']>;
+  };
+  ActivityMentionNotification: Omit<ActivityMentionNotification, 'activity'> & {
+    activity?: Maybe<ResolversParentTypes['ActivityUnion']>;
+  };
   ActivityMessageNotification: ActivityMessageNotification;
   ActivityReply: ActivityReply;
-  ActivityReplyLikeNotification: Omit<ActivityReplyLikeNotification, 'activity'> & { activity?: Maybe<ResolversParentTypes['ActivityUnion']> };
-  ActivityReplyNotification: Omit<ActivityReplyNotification, 'activity'> & { activity?: Maybe<ResolversParentTypes['ActivityUnion']> };
-  ActivityReplySubscribedNotification: Omit<ActivityReplySubscribedNotification, 'activity'> & { activity?: Maybe<ResolversParentTypes['ActivityUnion']> };
-  ActivityUnion: ResolversParentTypes['ListActivity'] | ResolversParentTypes['MessageActivity'] | ResolversParentTypes['TextActivity'];
+  ActivityReplyLikeNotification: Omit<ActivityReplyLikeNotification, 'activity'> & {
+    activity?: Maybe<ResolversParentTypes['ActivityUnion']>;
+  };
+  ActivityReplyNotification: Omit<ActivityReplyNotification, 'activity'> & {
+    activity?: Maybe<ResolversParentTypes['ActivityUnion']>;
+  };
+  ActivityReplySubscribedNotification: Omit<ActivityReplySubscribedNotification, 'activity'> & {
+    activity?: Maybe<ResolversParentTypes['ActivityUnion']>;
+  };
+  ActivityUnion:
+    | ResolversParentTypes['ListActivity']
+    | ResolversParentTypes['MessageActivity']
+    | ResolversParentTypes['TextActivity'];
   AiringNotification: AiringNotification;
   AiringProgression: AiringProgression;
   AiringSchedule: AiringSchedule;
@@ -4964,9 +4886,18 @@ export type ResolversParentTypes = ResolversObject<{
   GenreStats: GenreStats;
   ID: Scalars['ID'];
   Int: Scalars['Int'];
-  InternalPage: Omit<InternalPage, 'activities' | 'notifications'> & { activities?: Maybe<Array<Maybe<ResolversParentTypes['ActivityUnion']>>>, notifications?: Maybe<Array<Maybe<ResolversParentTypes['NotificationUnion']>>> };
+  InternalPage: Omit<InternalPage, 'activities' | 'notifications'> & {
+    activities?: Maybe<Array<Maybe<ResolversParentTypes['ActivityUnion']>>>;
+    notifications?: Maybe<Array<Maybe<ResolversParentTypes['NotificationUnion']>>>;
+  };
   Json: Scalars['Json'];
-  LikeableUnion: ResolversParentTypes['ActivityReply'] | ResolversParentTypes['ListActivity'] | ResolversParentTypes['MessageActivity'] | ResolversParentTypes['TextActivity'] | ResolversParentTypes['Thread'] | ResolversParentTypes['ThreadComment'];
+  LikeableUnion:
+    | ResolversParentTypes['ActivityReply']
+    | ResolversParentTypes['ListActivity']
+    | ResolversParentTypes['MessageActivity']
+    | ResolversParentTypes['TextActivity']
+    | ResolversParentTypes['Thread']
+    | ResolversParentTypes['ThreadComment'];
   ListActivity: ListActivity;
   ListActivityOption: ListActivityOption;
   ListActivityOptionInput: ListActivityOptionInput;
@@ -5005,8 +4936,28 @@ export type ResolversParentTypes = ResolversObject<{
   Mutation: {};
   NotificationOption: NotificationOption;
   NotificationOptionInput: NotificationOptionInput;
-  NotificationUnion: ResolversParentTypes['ActivityLikeNotification'] | ResolversParentTypes['ActivityMentionNotification'] | ResolversParentTypes['ActivityMessageNotification'] | ResolversParentTypes['ActivityReplyLikeNotification'] | ResolversParentTypes['ActivityReplyNotification'] | ResolversParentTypes['ActivityReplySubscribedNotification'] | ResolversParentTypes['AiringNotification'] | ResolversParentTypes['FollowingNotification'] | ResolversParentTypes['MediaDataChangeNotification'] | ResolversParentTypes['MediaDeletionNotification'] | ResolversParentTypes['MediaMergeNotification'] | ResolversParentTypes['RelatedMediaAdditionNotification'] | ResolversParentTypes['ThreadCommentLikeNotification'] | ResolversParentTypes['ThreadCommentMentionNotification'] | ResolversParentTypes['ThreadCommentReplyNotification'] | ResolversParentTypes['ThreadCommentSubscribedNotification'] | ResolversParentTypes['ThreadLikeNotification'];
-  Page: Omit<Page, 'activities' | 'notifications'> & { activities?: Maybe<Array<Maybe<ResolversParentTypes['ActivityUnion']>>>, notifications?: Maybe<Array<Maybe<ResolversParentTypes['NotificationUnion']>>> };
+  NotificationUnion:
+    | ResolversParentTypes['ActivityLikeNotification']
+    | ResolversParentTypes['ActivityMentionNotification']
+    | ResolversParentTypes['ActivityMessageNotification']
+    | ResolversParentTypes['ActivityReplyLikeNotification']
+    | ResolversParentTypes['ActivityReplyNotification']
+    | ResolversParentTypes['ActivityReplySubscribedNotification']
+    | ResolversParentTypes['AiringNotification']
+    | ResolversParentTypes['FollowingNotification']
+    | ResolversParentTypes['MediaDataChangeNotification']
+    | ResolversParentTypes['MediaDeletionNotification']
+    | ResolversParentTypes['MediaMergeNotification']
+    | ResolversParentTypes['RelatedMediaAdditionNotification']
+    | ResolversParentTypes['ThreadCommentLikeNotification']
+    | ResolversParentTypes['ThreadCommentMentionNotification']
+    | ResolversParentTypes['ThreadCommentReplyNotification']
+    | ResolversParentTypes['ThreadCommentSubscribedNotification']
+    | ResolversParentTypes['ThreadLikeNotification'];
+  Page: Omit<Page, 'activities' | 'notifications'> & {
+    activities?: Maybe<Array<Maybe<ResolversParentTypes['ActivityUnion']>>>;
+    notifications?: Maybe<Array<Maybe<ResolversParentTypes['NotificationUnion']>>>;
+  };
   PageInfo: PageInfo;
   ParsedMarkdown: ParsedMarkdown;
   Query: {};
@@ -5073,7 +5024,10 @@ export type ResolversParentTypes = ResolversObject<{
   YearStats: YearStats;
 }>;
 
-export type ActivityLikeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityLikeNotification'] = ResolversParentTypes['ActivityLikeNotification']> = ResolversObject<{
+export type ActivityLikeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityLikeNotification'] = ResolversParentTypes['ActivityLikeNotification']
+> = ResolversObject<{
   activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType>;
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5085,7 +5039,10 @@ export type ActivityLikeNotificationResolvers<ContextType = any, ParentType exte
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityMentionNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityMentionNotification'] = ResolversParentTypes['ActivityMentionNotification']> = ResolversObject<{
+export type ActivityMentionNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityMentionNotification'] = ResolversParentTypes['ActivityMentionNotification']
+> = ResolversObject<{
   activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType>;
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5097,7 +5054,10 @@ export type ActivityMentionNotificationResolvers<ContextType = any, ParentType e
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityMessageNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityMessageNotification'] = ResolversParentTypes['ActivityMessageNotification']> = ResolversObject<{
+export type ActivityMessageNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityMessageNotification'] = ResolversParentTypes['ActivityMessageNotification']
+> = ResolversObject<{
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5109,7 +5069,10 @@ export type ActivityMessageNotificationResolvers<ContextType = any, ParentType e
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityReplyResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityReply'] = ResolversParentTypes['ActivityReply']> = ResolversObject<{
+export type ActivityReplyResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityReply'] = ResolversParentTypes['ActivityReply']
+> = ResolversObject<{
   activityId?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5122,7 +5085,10 @@ export type ActivityReplyResolvers<ContextType = any, ParentType extends Resolve
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityReplyLikeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityReplyLikeNotification'] = ResolversParentTypes['ActivityReplyLikeNotification']> = ResolversObject<{
+export type ActivityReplyLikeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityReplyLikeNotification'] = ResolversParentTypes['ActivityReplyLikeNotification']
+> = ResolversObject<{
   activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType>;
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5134,7 +5100,10 @@ export type ActivityReplyLikeNotificationResolvers<ContextType = any, ParentType
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityReplyNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityReplyNotification'] = ResolversParentTypes['ActivityReplyNotification']> = ResolversObject<{
+export type ActivityReplyNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityReplyNotification'] = ResolversParentTypes['ActivityReplyNotification']
+> = ResolversObject<{
   activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType>;
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5146,7 +5115,10 @@ export type ActivityReplyNotificationResolvers<ContextType = any, ParentType ext
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityReplySubscribedNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityReplySubscribedNotification'] = ResolversParentTypes['ActivityReplySubscribedNotification']> = ResolversObject<{
+export type ActivityReplySubscribedNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityReplySubscribedNotification'] = ResolversParentTypes['ActivityReplySubscribedNotification']
+> = ResolversObject<{
   activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType>;
   activityId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5158,11 +5130,17 @@ export type ActivityReplySubscribedNotificationResolvers<ContextType = any, Pare
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ActivityUnionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ActivityUnion'] = ResolversParentTypes['ActivityUnion']> = ResolversObject<{
+export type ActivityUnionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ActivityUnion'] = ResolversParentTypes['ActivityUnion']
+> = ResolversObject<{
   __resolveType: TypeResolveFn<'ListActivity' | 'MessageActivity' | 'TextActivity', ParentType, ContextType>;
 }>;
 
-export type AiringNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['AiringNotification'] = ResolversParentTypes['AiringNotification']> = ResolversObject<{
+export type AiringNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AiringNotification'] = ResolversParentTypes['AiringNotification']
+> = ResolversObject<{
   animeId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   contexts?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5173,14 +5151,20 @@ export type AiringNotificationResolvers<ContextType = any, ParentType extends Re
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type AiringProgressionResolvers<ContextType = any, ParentType extends ResolversParentTypes['AiringProgression'] = ResolversParentTypes['AiringProgression']> = ResolversObject<{
+export type AiringProgressionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AiringProgression'] = ResolversParentTypes['AiringProgression']
+> = ResolversObject<{
   episode?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   score?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   watching?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type AiringScheduleResolvers<ContextType = any, ParentType extends ResolversParentTypes['AiringSchedule'] = ResolversParentTypes['AiringSchedule']> = ResolversObject<{
+export type AiringScheduleResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AiringSchedule'] = ResolversParentTypes['AiringSchedule']
+> = ResolversObject<{
   airingAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   episode?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5190,27 +5174,39 @@ export type AiringScheduleResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type AiringScheduleConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['AiringScheduleConnection'] = ResolversParentTypes['AiringScheduleConnection']> = ResolversObject<{
+export type AiringScheduleConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AiringScheduleConnection'] = ResolversParentTypes['AiringScheduleConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['AiringScheduleEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['AiringSchedule']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type AiringScheduleEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['AiringScheduleEdge'] = ResolversParentTypes['AiringScheduleEdge']> = ResolversObject<{
+export type AiringScheduleEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AiringScheduleEdge'] = ResolversParentTypes['AiringScheduleEdge']
+> = ResolversObject<{
   id?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   node?: Resolver<Maybe<ResolversTypes['AiringSchedule']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type AniChartUserResolvers<ContextType = any, ParentType extends ResolversParentTypes['AniChartUser'] = ResolversParentTypes['AniChartUser']> = ResolversObject<{
+export type AniChartUserResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AniChartUser'] = ResolversParentTypes['AniChartUser']
+> = ResolversObject<{
   highlights?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   settings?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterResolvers<ContextType = any, ParentType extends ResolversParentTypes['Character'] = ResolversParentTypes['Character']> = ResolversObject<{
+export type CharacterResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Character'] = ResolversParentTypes['Character']
+> = ResolversObject<{
   age?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   bloodType?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   dateOfBirth?: Resolver<Maybe<ResolversTypes['FuzzyDate']>, ParentType, ContextType>;
@@ -5229,32 +5225,54 @@ export type CharacterResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterConnection'] = ResolversParentTypes['CharacterConnection']> = ResolversObject<{
+export type CharacterConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterConnection'] = ResolversParentTypes['CharacterConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['CharacterEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Character']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterEdge'] = ResolversParentTypes['CharacterEdge']> = ResolversObject<{
+export type CharacterEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterEdge'] = ResolversParentTypes['CharacterEdge']
+> = ResolversObject<{
   favouriteOrder?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   media?: Resolver<Maybe<Array<Maybe<ResolversTypes['Media']>>>, ParentType, ContextType>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   node?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType>;
   role?: Resolver<Maybe<ResolversTypes['CharacterRole']>, ParentType, ContextType>;
-  voiceActorRoles?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffRoleType']>>>, ParentType, ContextType, Partial<CharacterEdgeVoiceActorRolesArgs>>;
-  voiceActors?: Resolver<Maybe<Array<Maybe<ResolversTypes['Staff']>>>, ParentType, ContextType, Partial<CharacterEdgeVoiceActorsArgs>>;
+  voiceActorRoles?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['StaffRoleType']>>>,
+    ParentType,
+    ContextType,
+    Partial<CharacterEdgeVoiceActorRolesArgs>
+  >;
+  voiceActors?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Staff']>>>,
+    ParentType,
+    ContextType,
+    Partial<CharacterEdgeVoiceActorsArgs>
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterImageResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterImage'] = ResolversParentTypes['CharacterImage']> = ResolversObject<{
+export type CharacterImageResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterImage'] = ResolversParentTypes['CharacterImage']
+> = ResolversObject<{
   large?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   medium?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterNameResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterName'] = ResolversParentTypes['CharacterName']> = ResolversObject<{
+export type CharacterNameResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterName'] = ResolversParentTypes['CharacterName']
+> = ResolversObject<{
   alternative?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   alternativeSpoiler?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   first?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5266,7 +5284,10 @@ export type CharacterNameResolvers<ContextType = any, ParentType extends Resolve
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterSubmissionResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterSubmission'] = ResolversParentTypes['CharacterSubmission']> = ResolversObject<{
+export type CharacterSubmissionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterSubmission'] = ResolversParentTypes['CharacterSubmission']
+> = ResolversObject<{
   assignee?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   character?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5280,14 +5301,20 @@ export type CharacterSubmissionResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterSubmissionConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterSubmissionConnection'] = ResolversParentTypes['CharacterSubmissionConnection']> = ResolversObject<{
+export type CharacterSubmissionConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterSubmissionConnection'] = ResolversParentTypes['CharacterSubmissionConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['CharacterSubmissionEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['CharacterSubmission']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type CharacterSubmissionEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['CharacterSubmissionEdge'] = ResolversParentTypes['CharacterSubmissionEdge']> = ResolversObject<{
+export type CharacterSubmissionEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CharacterSubmissionEdge'] = ResolversParentTypes['CharacterSubmissionEdge']
+> = ResolversObject<{
   node?: Resolver<Maybe<ResolversTypes['CharacterSubmission']>, ParentType, ContextType>;
   role?: Resolver<Maybe<ResolversTypes['CharacterRole']>, ParentType, ContextType>;
   submittedVoiceActors?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffSubmission']>>>, ParentType, ContextType>;
@@ -5299,21 +5326,40 @@ export interface CountryCodeScalarConfig extends GraphQLScalarTypeConfig<Resolve
   name: 'CountryCode';
 }
 
-export type DeletedResolvers<ContextType = any, ParentType extends ResolversParentTypes['Deleted'] = ResolversParentTypes['Deleted']> = ResolversObject<{
+export type DeletedResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Deleted'] = ResolversParentTypes['Deleted']
+> = ResolversObject<{
   deleted?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type FavouritesResolvers<ContextType = any, ParentType extends ResolversParentTypes['Favourites'] = ResolversParentTypes['Favourites']> = ResolversObject<{
+export type FavouritesResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Favourites'] = ResolversParentTypes['Favourites']
+> = ResolversObject<{
   anime?: Resolver<Maybe<ResolversTypes['MediaConnection']>, ParentType, ContextType, Partial<FavouritesAnimeArgs>>;
-  characters?: Resolver<Maybe<ResolversTypes['CharacterConnection']>, ParentType, ContextType, Partial<FavouritesCharactersArgs>>;
+  characters?: Resolver<
+    Maybe<ResolversTypes['CharacterConnection']>,
+    ParentType,
+    ContextType,
+    Partial<FavouritesCharactersArgs>
+  >;
   manga?: Resolver<Maybe<ResolversTypes['MediaConnection']>, ParentType, ContextType, Partial<FavouritesMangaArgs>>;
   staff?: Resolver<Maybe<ResolversTypes['StaffConnection']>, ParentType, ContextType, Partial<FavouritesStaffArgs>>;
-  studios?: Resolver<Maybe<ResolversTypes['StudioConnection']>, ParentType, ContextType, Partial<FavouritesStudiosArgs>>;
+  studios?: Resolver<
+    Maybe<ResolversTypes['StudioConnection']>,
+    ParentType,
+    ContextType,
+    Partial<FavouritesStudiosArgs>
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type FollowingNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['FollowingNotification'] = ResolversParentTypes['FollowingNotification']> = ResolversObject<{
+export type FollowingNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['FollowingNotification'] = ResolversParentTypes['FollowingNotification']
+> = ResolversObject<{
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5323,13 +5369,19 @@ export type FollowingNotificationResolvers<ContextType = any, ParentType extends
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type FormatStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['FormatStats'] = ResolversParentTypes['FormatStats']> = ResolversObject<{
+export type FormatStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['FormatStats'] = ResolversParentTypes['FormatStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   format?: Resolver<Maybe<ResolversTypes['MediaFormat']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type FuzzyDateResolvers<ContextType = any, ParentType extends ResolversParentTypes['FuzzyDate'] = ResolversParentTypes['FuzzyDate']> = ResolversObject<{
+export type FuzzyDateResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['FuzzyDate'] = ResolversParentTypes['FuzzyDate']
+> = ResolversObject<{
   day?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   month?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   year?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5340,7 +5392,10 @@ export interface FuzzyDateIntScalarConfig extends GraphQLScalarTypeConfig<Resolv
   name: 'FuzzyDateInt';
 }
 
-export type GenreStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['GenreStats'] = ResolversParentTypes['GenreStats']> = ResolversObject<{
+export type GenreStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['GenreStats'] = ResolversParentTypes['GenreStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   genre?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5348,33 +5403,161 @@ export type GenreStatsResolvers<ContextType = any, ParentType extends ResolversP
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type InternalPageResolvers<ContextType = any, ParentType extends ResolversParentTypes['InternalPage'] = ResolversParentTypes['InternalPage']> = ResolversObject<{
-  activities?: Resolver<Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>, ParentType, ContextType, Partial<InternalPageActivitiesArgs>>;
-  activityReplies?: Resolver<Maybe<Array<Maybe<ResolversTypes['ActivityReply']>>>, ParentType, ContextType, Partial<InternalPageActivityRepliesArgs>>;
-  airingSchedules?: Resolver<Maybe<Array<Maybe<ResolversTypes['AiringSchedule']>>>, ParentType, ContextType, Partial<InternalPageAiringSchedulesArgs>>;
-  characterSubmissions?: Resolver<Maybe<Array<Maybe<ResolversTypes['CharacterSubmission']>>>, ParentType, ContextType, Partial<InternalPageCharacterSubmissionsArgs>>;
-  characters?: Resolver<Maybe<Array<Maybe<ResolversTypes['Character']>>>, ParentType, ContextType, Partial<InternalPageCharactersArgs>>;
-  followers?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, RequireFields<InternalPageFollowersArgs, 'userId'>>;
-  following?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, RequireFields<InternalPageFollowingArgs, 'userId'>>;
-  likes?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<InternalPageLikesArgs>>;
-  media?: Resolver<Maybe<Array<Maybe<ResolversTypes['Media']>>>, ParentType, ContextType, Partial<InternalPageMediaArgs>>;
-  mediaList?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>, ParentType, ContextType, Partial<InternalPageMediaListArgs>>;
-  mediaSubmissions?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaSubmission']>>>, ParentType, ContextType, Partial<InternalPageMediaSubmissionsArgs>>;
-  mediaTrends?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaTrend']>>>, ParentType, ContextType, Partial<InternalPageMediaTrendsArgs>>;
-  modActions?: Resolver<Maybe<Array<Maybe<ResolversTypes['ModAction']>>>, ParentType, ContextType, Partial<InternalPageModActionsArgs>>;
-  notifications?: Resolver<Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>, ParentType, ContextType, Partial<InternalPageNotificationsArgs>>;
+export type InternalPageResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['InternalPage'] = ResolversParentTypes['InternalPage']
+> = ResolversObject<{
+  activities?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageActivitiesArgs>
+  >;
+  activityReplies?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ActivityReply']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageActivityRepliesArgs>
+  >;
+  airingSchedules?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['AiringSchedule']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageAiringSchedulesArgs>
+  >;
+  characterSubmissions?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['CharacterSubmission']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageCharacterSubmissionsArgs>
+  >;
+  characters?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Character']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageCharactersArgs>
+  >;
+  followers?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    RequireFields<InternalPageFollowersArgs, 'userId'>
+  >;
+  following?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    RequireFields<InternalPageFollowingArgs, 'userId'>
+  >;
+  likes?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageLikesArgs>
+  >;
+  media?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Media']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageMediaArgs>
+  >;
+  mediaList?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaList']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageMediaListArgs>
+  >;
+  mediaSubmissions?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaSubmission']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageMediaSubmissionsArgs>
+  >;
+  mediaTrends?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaTrend']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageMediaTrendsArgs>
+  >;
+  modActions?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ModAction']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageModActionsArgs>
+  >;
+  notifications?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageNotificationsArgs>
+  >;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
-  recommendations?: Resolver<Maybe<Array<Maybe<ResolversTypes['Recommendation']>>>, ParentType, ContextType, Partial<InternalPageRecommendationsArgs>>;
-  reports?: Resolver<Maybe<Array<Maybe<ResolversTypes['Report']>>>, ParentType, ContextType, Partial<InternalPageReportsArgs>>;
-  reviews?: Resolver<Maybe<Array<Maybe<ResolversTypes['Review']>>>, ParentType, ContextType, Partial<InternalPageReviewsArgs>>;
-  revisionHistory?: Resolver<Maybe<Array<Maybe<ResolversTypes['RevisionHistory']>>>, ParentType, ContextType, Partial<InternalPageRevisionHistoryArgs>>;
-  staff?: Resolver<Maybe<Array<Maybe<ResolversTypes['Staff']>>>, ParentType, ContextType, Partial<InternalPageStaffArgs>>;
-  staffSubmissions?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffSubmission']>>>, ParentType, ContextType, Partial<InternalPageStaffSubmissionsArgs>>;
-  studios?: Resolver<Maybe<Array<Maybe<ResolversTypes['Studio']>>>, ParentType, ContextType, Partial<InternalPageStudiosArgs>>;
-  threadComments?: Resolver<Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>, ParentType, ContextType, Partial<InternalPageThreadCommentsArgs>>;
-  threads?: Resolver<Maybe<Array<Maybe<ResolversTypes['Thread']>>>, ParentType, ContextType, Partial<InternalPageThreadsArgs>>;
-  userBlockSearch?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<InternalPageUserBlockSearchArgs>>;
-  users?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<InternalPageUsersArgs>>;
+  recommendations?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Recommendation']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageRecommendationsArgs>
+  >;
+  reports?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Report']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageReportsArgs>
+  >;
+  reviews?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Review']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageReviewsArgs>
+  >;
+  revisionHistory?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['RevisionHistory']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageRevisionHistoryArgs>
+  >;
+  staff?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Staff']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageStaffArgs>
+  >;
+  staffSubmissions?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['StaffSubmission']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageStaffSubmissionsArgs>
+  >;
+  studios?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Studio']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageStudiosArgs>
+  >;
+  threadComments?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageThreadCommentsArgs>
+  >;
+  threads?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Thread']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageThreadsArgs>
+  >;
+  userBlockSearch?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageUserBlockSearchArgs>
+  >;
+  users?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    Partial<InternalPageUsersArgs>
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -5382,11 +5565,21 @@ export interface JsonScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes
   name: 'Json';
 }
 
-export type LikeableUnionResolvers<ContextType = any, ParentType extends ResolversParentTypes['LikeableUnion'] = ResolversParentTypes['LikeableUnion']> = ResolversObject<{
-  __resolveType: TypeResolveFn<'ActivityReply' | 'ListActivity' | 'MessageActivity' | 'TextActivity' | 'Thread' | 'ThreadComment', ParentType, ContextType>;
+export type LikeableUnionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['LikeableUnion'] = ResolversParentTypes['LikeableUnion']
+> = ResolversObject<{
+  __resolveType: TypeResolveFn<
+    'ActivityReply' | 'ListActivity' | 'MessageActivity' | 'TextActivity' | 'Thread' | 'ThreadComment',
+    ParentType,
+    ContextType
+  >;
 }>;
 
-export type ListActivityResolvers<ContextType = any, ParentType extends ResolversParentTypes['ListActivity'] = ResolversParentTypes['ListActivity']> = ResolversObject<{
+export type ListActivityResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ListActivity'] = ResolversParentTypes['ListActivity']
+> = ResolversObject<{
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   isLiked?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
@@ -5407,25 +5600,44 @@ export type ListActivityResolvers<ContextType = any, ParentType extends Resolver
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ListActivityOptionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ListActivityOption'] = ResolversParentTypes['ListActivityOption']> = ResolversObject<{
+export type ListActivityOptionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ListActivityOption'] = ResolversParentTypes['ListActivityOption']
+> = ResolversObject<{
   disabled?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   type?: Resolver<Maybe<ResolversTypes['MediaListStatus']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ListScoreStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['ListScoreStats'] = ResolversParentTypes['ListScoreStats']> = ResolversObject<{
+export type ListScoreStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ListScoreStats'] = ResolversParentTypes['ListScoreStats']
+> = ResolversObject<{
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   standardDeviation?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaResolvers<ContextType = any, ParentType extends ResolversParentTypes['Media'] = ResolversParentTypes['Media']> = ResolversObject<{
-  airingSchedule?: Resolver<Maybe<ResolversTypes['AiringScheduleConnection']>, ParentType, ContextType, Partial<MediaAiringScheduleArgs>>;
+export type MediaResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Media'] = ResolversParentTypes['Media']
+> = ResolversObject<{
+  airingSchedule?: Resolver<
+    Maybe<ResolversTypes['AiringScheduleConnection']>,
+    ParentType,
+    ContextType,
+    Partial<MediaAiringScheduleArgs>
+  >;
   autoCreateForumThread?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   averageScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   bannerImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   chapters?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  characters?: Resolver<Maybe<ResolversTypes['CharacterConnection']>, ParentType, ContextType, Partial<MediaCharactersArgs>>;
+  characters?: Resolver<
+    Maybe<ResolversTypes['CharacterConnection']>,
+    ParentType,
+    ContextType,
+    Partial<MediaCharactersArgs>
+  >;
   countryOfOrigin?: Resolver<Maybe<ResolversTypes['CountryCode']>, ParentType, ContextType>;
   coverImage?: Resolver<Maybe<ResolversTypes['MediaCoverImage']>, ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<MediaDescriptionArgs>>;
@@ -5452,7 +5664,12 @@ export type MediaResolvers<ContextType = any, ParentType extends ResolversParent
   nextAiringEpisode?: Resolver<Maybe<ResolversTypes['AiringSchedule']>, ParentType, ContextType>;
   popularity?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   rankings?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaRank']>>>, ParentType, ContextType>;
-  recommendations?: Resolver<Maybe<ResolversTypes['RecommendationConnection']>, ParentType, ContextType, Partial<MediaRecommendationsArgs>>;
+  recommendations?: Resolver<
+    Maybe<ResolversTypes['RecommendationConnection']>,
+    ParentType,
+    ContextType,
+    Partial<MediaRecommendationsArgs>
+  >;
   relations?: Resolver<Maybe<ResolversTypes['MediaConnection']>, ParentType, ContextType>;
   reviews?: Resolver<Maybe<ResolversTypes['ReviewConnection']>, ParentType, ContextType, Partial<MediaReviewsArgs>>;
   season?: Resolver<Maybe<ResolversTypes['MediaSeason']>, ParentType, ContextType>;
@@ -5478,7 +5695,10 @@ export type MediaResolvers<ContextType = any, ParentType extends ResolversParent
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaCharacterResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaCharacter'] = ResolversParentTypes['MediaCharacter']> = ResolversObject<{
+export type MediaCharacterResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaCharacter'] = ResolversParentTypes['MediaCharacter']
+> = ResolversObject<{
   character?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType>;
   characterName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   dubGroup?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5489,14 +5709,20 @@ export type MediaCharacterResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaConnection'] = ResolversParentTypes['MediaConnection']> = ResolversObject<{
+export type MediaConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaConnection'] = ResolversParentTypes['MediaConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Media']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaCoverImageResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaCoverImage'] = ResolversParentTypes['MediaCoverImage']> = ResolversObject<{
+export type MediaCoverImageResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaCoverImage'] = ResolversParentTypes['MediaCoverImage']
+> = ResolversObject<{
   color?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   extraLarge?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   large?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5504,7 +5730,10 @@ export type MediaCoverImageResolvers<ContextType = any, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaDataChangeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaDataChangeNotification'] = ResolversParentTypes['MediaDataChangeNotification']> = ResolversObject<{
+export type MediaDataChangeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaDataChangeNotification'] = ResolversParentTypes['MediaDataChangeNotification']
+> = ResolversObject<{
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5515,7 +5744,10 @@ export type MediaDataChangeNotificationResolvers<ContextType = any, ParentType e
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaDeletionNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaDeletionNotification'] = ResolversParentTypes['MediaDeletionNotification']> = ResolversObject<{
+export type MediaDeletionNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaDeletionNotification'] = ResolversParentTypes['MediaDeletionNotification']
+> = ResolversObject<{
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   deletedMediaTitle?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5525,7 +5757,10 @@ export type MediaDeletionNotificationResolvers<ContextType = any, ParentType ext
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaEdge'] = ResolversParentTypes['MediaEdge']> = ResolversObject<{
+export type MediaEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaEdge'] = ResolversParentTypes['MediaEdge']
+> = ResolversObject<{
   characterName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   characterRole?: Resolver<Maybe<ResolversTypes['CharacterRole']>, ParentType, ContextType>;
   characters?: Resolver<Maybe<Array<Maybe<ResolversTypes['Character']>>>, ParentType, ContextType>;
@@ -5534,15 +5769,33 @@ export type MediaEdgeResolvers<ContextType = any, ParentType extends ResolversPa
   id?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   isMainStudio?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   node?: Resolver<Maybe<ResolversTypes['Media']>, ParentType, ContextType>;
-  relationType?: Resolver<Maybe<ResolversTypes['MediaRelation']>, ParentType, ContextType, Partial<MediaEdgeRelationTypeArgs>>;
+  relationType?: Resolver<
+    Maybe<ResolversTypes['MediaRelation']>,
+    ParentType,
+    ContextType,
+    Partial<MediaEdgeRelationTypeArgs>
+  >;
   roleNotes?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   staffRole?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  voiceActorRoles?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffRoleType']>>>, ParentType, ContextType, Partial<MediaEdgeVoiceActorRolesArgs>>;
-  voiceActors?: Resolver<Maybe<Array<Maybe<ResolversTypes['Staff']>>>, ParentType, ContextType, Partial<MediaEdgeVoiceActorsArgs>>;
+  voiceActorRoles?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['StaffRoleType']>>>,
+    ParentType,
+    ContextType,
+    Partial<MediaEdgeVoiceActorRolesArgs>
+  >;
+  voiceActors?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Staff']>>>,
+    ParentType,
+    ContextType,
+    Partial<MediaEdgeVoiceActorsArgs>
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaExternalLinkResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaExternalLink'] = ResolversParentTypes['MediaExternalLink']> = ResolversObject<{
+export type MediaExternalLinkResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaExternalLink'] = ResolversParentTypes['MediaExternalLink']
+> = ResolversObject<{
   color?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   icon?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5556,7 +5809,10 @@ export type MediaExternalLinkResolvers<ContextType = any, ParentType extends Res
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaListResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaList'] = ResolversParentTypes['MediaList']> = ResolversObject<{
+export type MediaListResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaList'] = ResolversParentTypes['MediaList']
+> = ResolversObject<{
   advancedScores?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   completedAt?: Resolver<Maybe<ResolversTypes['FuzzyDate']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5580,16 +5836,32 @@ export type MediaListResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaListCollectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaListCollection'] = ResolversParentTypes['MediaListCollection']> = ResolversObject<{
-  customLists?: Resolver<Maybe<Array<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>>>, ParentType, ContextType, Partial<MediaListCollectionCustomListsArgs>>;
+export type MediaListCollectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaListCollection'] = ResolversParentTypes['MediaListCollection']
+> = ResolversObject<{
+  customLists?: Resolver<
+    Maybe<Array<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>>>,
+    ParentType,
+    ContextType,
+    Partial<MediaListCollectionCustomListsArgs>
+  >;
   hasNextChunk?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   lists?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaListGroup']>>>, ParentType, ContextType>;
-  statusLists?: Resolver<Maybe<Array<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>>>, ParentType, ContextType, Partial<MediaListCollectionStatusListsArgs>>;
+  statusLists?: Resolver<
+    Maybe<Array<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>>>,
+    ParentType,
+    ContextType,
+    Partial<MediaListCollectionStatusListsArgs>
+  >;
   user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaListGroupResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaListGroup'] = ResolversParentTypes['MediaListGroup']> = ResolversObject<{
+export type MediaListGroupResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaListGroup'] = ResolversParentTypes['MediaListGroup']
+> = ResolversObject<{
   entries?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>, ParentType, ContextType>;
   isCustomList?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   isSplitCompletedList?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
@@ -5598,7 +5870,10 @@ export type MediaListGroupResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaListOptionsResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaListOptions'] = ResolversParentTypes['MediaListOptions']> = ResolversObject<{
+export type MediaListOptionsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaListOptions'] = ResolversParentTypes['MediaListOptions']
+> = ResolversObject<{
   animeList?: Resolver<Maybe<ResolversTypes['MediaListTypeOptions']>, ParentType, ContextType>;
   mangaList?: Resolver<Maybe<ResolversTypes['MediaListTypeOptions']>, ParentType, ContextType>;
   rowOrder?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5609,7 +5884,10 @@ export type MediaListOptionsResolvers<ContextType = any, ParentType extends Reso
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaListTypeOptionsResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaListTypeOptions'] = ResolversParentTypes['MediaListTypeOptions']> = ResolversObject<{
+export type MediaListTypeOptionsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaListTypeOptions'] = ResolversParentTypes['MediaListTypeOptions']
+> = ResolversObject<{
   advancedScoring?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   advancedScoringEnabled?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   customLists?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
@@ -5619,7 +5897,10 @@ export type MediaListTypeOptionsResolvers<ContextType = any, ParentType extends 
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaMergeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaMergeNotification'] = ResolversParentTypes['MediaMergeNotification']> = ResolversObject<{
+export type MediaMergeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaMergeNotification'] = ResolversParentTypes['MediaMergeNotification']
+> = ResolversObject<{
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   deletedMediaTitles?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
@@ -5631,7 +5912,10 @@ export type MediaMergeNotificationResolvers<ContextType = any, ParentType extend
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaRankResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaRank'] = ResolversParentTypes['MediaRank']> = ResolversObject<{
+export type MediaRankResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaRank'] = ResolversParentTypes['MediaRank']
+> = ResolversObject<{
   allTime?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   context?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   format?: Resolver<ResolversTypes['MediaFormat'], ParentType, ContextType>;
@@ -5643,14 +5927,20 @@ export type MediaRankResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaStats'] = ResolversParentTypes['MediaStats']> = ResolversObject<{
+export type MediaStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaStats'] = ResolversParentTypes['MediaStats']
+> = ResolversObject<{
   airingProgression?: Resolver<Maybe<Array<Maybe<ResolversTypes['AiringProgression']>>>, ParentType, ContextType>;
   scoreDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['ScoreDistribution']>>>, ParentType, ContextType>;
   statusDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['StatusDistribution']>>>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaStreamingEpisodeResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaStreamingEpisode'] = ResolversParentTypes['MediaStreamingEpisode']> = ResolversObject<{
+export type MediaStreamingEpisodeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaStreamingEpisode'] = ResolversParentTypes['MediaStreamingEpisode']
+> = ResolversObject<{
   site?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   thumbnail?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -5658,7 +5948,10 @@ export type MediaStreamingEpisodeResolvers<ContextType = any, ParentType extends
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaSubmissionResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaSubmission'] = ResolversParentTypes['MediaSubmission']> = ResolversObject<{
+export type MediaSubmissionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaSubmission'] = ResolversParentTypes['MediaSubmission']
+> = ResolversObject<{
   assignee?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   changes?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   characters?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaSubmissionComparison']>>>, ParentType, ContextType>;
@@ -5679,7 +5972,10 @@ export type MediaSubmissionResolvers<ContextType = any, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaSubmissionComparisonResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaSubmissionComparison'] = ResolversParentTypes['MediaSubmissionComparison']> = ResolversObject<{
+export type MediaSubmissionComparisonResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaSubmissionComparison'] = ResolversParentTypes['MediaSubmissionComparison']
+> = ResolversObject<{
   character?: Resolver<Maybe<ResolversTypes['MediaCharacter']>, ParentType, ContextType>;
   externalLink?: Resolver<Maybe<ResolversTypes['MediaExternalLink']>, ParentType, ContextType>;
   staff?: Resolver<Maybe<ResolversTypes['StaffEdge']>, ParentType, ContextType>;
@@ -5688,7 +5984,10 @@ export type MediaSubmissionComparisonResolvers<ContextType = any, ParentType ext
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaSubmissionEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaSubmissionEdge'] = ResolversParentTypes['MediaSubmissionEdge']> = ResolversObject<{
+export type MediaSubmissionEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaSubmissionEdge'] = ResolversParentTypes['MediaSubmissionEdge']
+> = ResolversObject<{
   character?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType>;
   characterName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   characterRole?: Resolver<Maybe<ResolversTypes['CharacterRole']>, ParentType, ContextType>;
@@ -5708,7 +6007,10 @@ export type MediaSubmissionEdgeResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTagResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTag'] = ResolversParentTypes['MediaTag']> = ResolversObject<{
+export type MediaTagResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTag'] = ResolversParentTypes['MediaTag']
+> = ResolversObject<{
   category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5721,7 +6023,10 @@ export type MediaTagResolvers<ContextType = any, ParentType extends ResolversPar
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTitleResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTitle'] = ResolversParentTypes['MediaTitle']> = ResolversObject<{
+export type MediaTitleResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTitle'] = ResolversParentTypes['MediaTitle']
+> = ResolversObject<{
   english?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<MediaTitleEnglishArgs>>;
   native?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<MediaTitleNativeArgs>>;
   romaji?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<MediaTitleRomajiArgs>>;
@@ -5729,14 +6034,20 @@ export type MediaTitleResolvers<ContextType = any, ParentType extends ResolversP
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTrailerResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTrailer'] = ResolversParentTypes['MediaTrailer']> = ResolversObject<{
+export type MediaTrailerResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTrailer'] = ResolversParentTypes['MediaTrailer']
+> = ResolversObject<{
   id?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   site?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   thumbnail?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTrendResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTrend'] = ResolversParentTypes['MediaTrend']> = ResolversObject<{
+export type MediaTrendResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTrend'] = ResolversParentTypes['MediaTrend']
+> = ResolversObject<{
   averageScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   date?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   episode?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5749,19 +6060,28 @@ export type MediaTrendResolvers<ContextType = any, ParentType extends ResolversP
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTrendConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTrendConnection'] = ResolversParentTypes['MediaTrendConnection']> = ResolversObject<{
+export type MediaTrendConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTrendConnection'] = ResolversParentTypes['MediaTrendConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaTrendEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaTrend']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MediaTrendEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['MediaTrendEdge'] = ResolversParentTypes['MediaTrendEdge']> = ResolversObject<{
+export type MediaTrendEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MediaTrendEdge'] = ResolversParentTypes['MediaTrendEdge']
+> = ResolversObject<{
   node?: Resolver<Maybe<ResolversTypes['MediaTrend']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MessageActivityResolvers<ContextType = any, ParentType extends ResolversParentTypes['MessageActivity'] = ResolversParentTypes['MessageActivity']> = ResolversObject<{
+export type MessageActivityResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MessageActivity'] = ResolversParentTypes['MessageActivity']
+> = ResolversObject<{
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   isLiked?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
@@ -5782,7 +6102,10 @@ export type MessageActivityResolvers<ContextType = any, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ModActionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ModAction'] = ResolversParentTypes['ModAction']> = ResolversObject<{
+export type ModActionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ModAction'] = ResolversParentTypes['ModAction']
+> = ResolversObject<{
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   data?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5794,72 +6117,272 @@ export type ModActionResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
-  DeleteActivity?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteActivityArgs>>;
-  DeleteActivityReply?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteActivityReplyArgs>>;
-  DeleteCustomList?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteCustomListArgs>>;
-  DeleteMediaListEntry?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteMediaListEntryArgs>>;
+export type MutationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+> = ResolversObject<{
+  DeleteActivity?: Resolver<
+    Maybe<ResolversTypes['Deleted']>,
+    ParentType,
+    ContextType,
+    Partial<MutationDeleteActivityArgs>
+  >;
+  DeleteActivityReply?: Resolver<
+    Maybe<ResolversTypes['Deleted']>,
+    ParentType,
+    ContextType,
+    Partial<MutationDeleteActivityReplyArgs>
+  >;
+  DeleteCustomList?: Resolver<
+    Maybe<ResolversTypes['Deleted']>,
+    ParentType,
+    ContextType,
+    Partial<MutationDeleteCustomListArgs>
+  >;
+  DeleteMediaListEntry?: Resolver<
+    Maybe<ResolversTypes['Deleted']>,
+    ParentType,
+    ContextType,
+    Partial<MutationDeleteMediaListEntryArgs>
+  >;
   DeleteReview?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteReviewArgs>>;
   DeleteThread?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteThreadArgs>>;
-  DeleteThreadComment?: Resolver<Maybe<ResolversTypes['Deleted']>, ParentType, ContextType, Partial<MutationDeleteThreadCommentArgs>>;
+  DeleteThreadComment?: Resolver<
+    Maybe<ResolversTypes['Deleted']>,
+    ParentType,
+    ContextType,
+    Partial<MutationDeleteThreadCommentArgs>
+  >;
   RateReview?: Resolver<Maybe<ResolversTypes['Review']>, ParentType, ContextType, Partial<MutationRateReviewArgs>>;
-  SaveActivityReply?: Resolver<Maybe<ResolversTypes['ActivityReply']>, ParentType, ContextType, Partial<MutationSaveActivityReplyArgs>>;
-  SaveListActivity?: Resolver<Maybe<ResolversTypes['ListActivity']>, ParentType, ContextType, Partial<MutationSaveListActivityArgs>>;
-  SaveMediaListEntry?: Resolver<Maybe<ResolversTypes['MediaList']>, ParentType, ContextType, Partial<MutationSaveMediaListEntryArgs>>;
-  SaveMessageActivity?: Resolver<Maybe<ResolversTypes['MessageActivity']>, ParentType, ContextType, Partial<MutationSaveMessageActivityArgs>>;
-  SaveRecommendation?: Resolver<Maybe<ResolversTypes['Recommendation']>, ParentType, ContextType, Partial<MutationSaveRecommendationArgs>>;
+  SaveActivityReply?: Resolver<
+    Maybe<ResolversTypes['ActivityReply']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveActivityReplyArgs>
+  >;
+  SaveListActivity?: Resolver<
+    Maybe<ResolversTypes['ListActivity']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveListActivityArgs>
+  >;
+  SaveMediaListEntry?: Resolver<
+    Maybe<ResolversTypes['MediaList']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveMediaListEntryArgs>
+  >;
+  SaveMessageActivity?: Resolver<
+    Maybe<ResolversTypes['MessageActivity']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveMessageActivityArgs>
+  >;
+  SaveRecommendation?: Resolver<
+    Maybe<ResolversTypes['Recommendation']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveRecommendationArgs>
+  >;
   SaveReview?: Resolver<Maybe<ResolversTypes['Review']>, ParentType, ContextType, Partial<MutationSaveReviewArgs>>;
-  SaveTextActivity?: Resolver<Maybe<ResolversTypes['TextActivity']>, ParentType, ContextType, Partial<MutationSaveTextActivityArgs>>;
+  SaveTextActivity?: Resolver<
+    Maybe<ResolversTypes['TextActivity']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveTextActivityArgs>
+  >;
   SaveThread?: Resolver<Maybe<ResolversTypes['Thread']>, ParentType, ContextType, Partial<MutationSaveThreadArgs>>;
-  SaveThreadComment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType, Partial<MutationSaveThreadCommentArgs>>;
-  ToggleActivityPin?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType, Partial<MutationToggleActivityPinArgs>>;
-  ToggleActivitySubscription?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType, Partial<MutationToggleActivitySubscriptionArgs>>;
-  ToggleFavourite?: Resolver<Maybe<ResolversTypes['Favourites']>, ParentType, ContextType, Partial<MutationToggleFavouriteArgs>>;
+  SaveThreadComment?: Resolver<
+    Maybe<ResolversTypes['ThreadComment']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSaveThreadCommentArgs>
+  >;
+  ToggleActivityPin?: Resolver<
+    Maybe<ResolversTypes['ActivityUnion']>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleActivityPinArgs>
+  >;
+  ToggleActivitySubscription?: Resolver<
+    Maybe<ResolversTypes['ActivityUnion']>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleActivitySubscriptionArgs>
+  >;
+  ToggleFavourite?: Resolver<
+    Maybe<ResolversTypes['Favourites']>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleFavouriteArgs>
+  >;
   ToggleFollow?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<MutationToggleFollowArgs>>;
-  ToggleLike?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<MutationToggleLikeArgs>>;
-  ToggleLikeV2?: Resolver<Maybe<ResolversTypes['LikeableUnion']>, ParentType, ContextType, Partial<MutationToggleLikeV2Args>>;
-  ToggleThreadSubscription?: Resolver<Maybe<ResolversTypes['Thread']>, ParentType, ContextType, Partial<MutationToggleThreadSubscriptionArgs>>;
-  UpdateAniChartHighlights?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType, Partial<MutationUpdateAniChartHighlightsArgs>>;
-  UpdateAniChartSettings?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType, Partial<MutationUpdateAniChartSettingsArgs>>;
-  UpdateFavouriteOrder?: Resolver<Maybe<ResolversTypes['Favourites']>, ParentType, ContextType, Partial<MutationUpdateFavouriteOrderArgs>>;
-  UpdateMediaListEntries?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>, ParentType, ContextType, Partial<MutationUpdateMediaListEntriesArgs>>;
+  ToggleLike?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleLikeArgs>
+  >;
+  ToggleLikeV2?: Resolver<
+    Maybe<ResolversTypes['LikeableUnion']>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleLikeV2Args>
+  >;
+  ToggleThreadSubscription?: Resolver<
+    Maybe<ResolversTypes['Thread']>,
+    ParentType,
+    ContextType,
+    Partial<MutationToggleThreadSubscriptionArgs>
+  >;
+  UpdateAniChartHighlights?: Resolver<
+    Maybe<ResolversTypes['Json']>,
+    ParentType,
+    ContextType,
+    Partial<MutationUpdateAniChartHighlightsArgs>
+  >;
+  UpdateAniChartSettings?: Resolver<
+    Maybe<ResolversTypes['Json']>,
+    ParentType,
+    ContextType,
+    Partial<MutationUpdateAniChartSettingsArgs>
+  >;
+  UpdateFavouriteOrder?: Resolver<
+    Maybe<ResolversTypes['Favourites']>,
+    ParentType,
+    ContextType,
+    Partial<MutationUpdateFavouriteOrderArgs>
+  >;
+  UpdateMediaListEntries?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaList']>>>,
+    ParentType,
+    ContextType,
+    Partial<MutationUpdateMediaListEntriesArgs>
+  >;
   UpdateUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<MutationUpdateUserArgs>>;
 }>;
 
-export type NotificationOptionResolvers<ContextType = any, ParentType extends ResolversParentTypes['NotificationOption'] = ResolversParentTypes['NotificationOption']> = ResolversObject<{
+export type NotificationOptionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['NotificationOption'] = ResolversParentTypes['NotificationOption']
+> = ResolversObject<{
   enabled?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   type?: Resolver<Maybe<ResolversTypes['NotificationType']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type NotificationUnionResolvers<ContextType = any, ParentType extends ResolversParentTypes['NotificationUnion'] = ResolversParentTypes['NotificationUnion']> = ResolversObject<{
-  __resolveType: TypeResolveFn<'ActivityLikeNotification' | 'ActivityMentionNotification' | 'ActivityMessageNotification' | 'ActivityReplyLikeNotification' | 'ActivityReplyNotification' | 'ActivityReplySubscribedNotification' | 'AiringNotification' | 'FollowingNotification' | 'MediaDataChangeNotification' | 'MediaDeletionNotification' | 'MediaMergeNotification' | 'RelatedMediaAdditionNotification' | 'ThreadCommentLikeNotification' | 'ThreadCommentMentionNotification' | 'ThreadCommentReplyNotification' | 'ThreadCommentSubscribedNotification' | 'ThreadLikeNotification', ParentType, ContextType>;
+export type NotificationUnionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['NotificationUnion'] = ResolversParentTypes['NotificationUnion']
+> = ResolversObject<{
+  __resolveType: TypeResolveFn<
+    | 'ActivityLikeNotification'
+    | 'ActivityMentionNotification'
+    | 'ActivityMessageNotification'
+    | 'ActivityReplyLikeNotification'
+    | 'ActivityReplyNotification'
+    | 'ActivityReplySubscribedNotification'
+    | 'AiringNotification'
+    | 'FollowingNotification'
+    | 'MediaDataChangeNotification'
+    | 'MediaDeletionNotification'
+    | 'MediaMergeNotification'
+    | 'RelatedMediaAdditionNotification'
+    | 'ThreadCommentLikeNotification'
+    | 'ThreadCommentMentionNotification'
+    | 'ThreadCommentReplyNotification'
+    | 'ThreadCommentSubscribedNotification'
+    | 'ThreadLikeNotification',
+    ParentType,
+    ContextType
+  >;
 }>;
 
-export type PageResolvers<ContextType = any, ParentType extends ResolversParentTypes['Page'] = ResolversParentTypes['Page']> = ResolversObject<{
-  activities?: Resolver<Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>, ParentType, ContextType, Partial<PageActivitiesArgs>>;
-  activityReplies?: Resolver<Maybe<Array<Maybe<ResolversTypes['ActivityReply']>>>, ParentType, ContextType, Partial<PageActivityRepliesArgs>>;
-  airingSchedules?: Resolver<Maybe<Array<Maybe<ResolversTypes['AiringSchedule']>>>, ParentType, ContextType, Partial<PageAiringSchedulesArgs>>;
-  characters?: Resolver<Maybe<Array<Maybe<ResolversTypes['Character']>>>, ParentType, ContextType, Partial<PageCharactersArgs>>;
-  followers?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, RequireFields<PageFollowersArgs, 'userId'>>;
-  following?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, RequireFields<PageFollowingArgs, 'userId'>>;
+export type PageResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Page'] = ResolversParentTypes['Page']
+> = ResolversObject<{
+  activities?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ActivityUnion']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageActivitiesArgs>
+  >;
+  activityReplies?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ActivityReply']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageActivityRepliesArgs>
+  >;
+  airingSchedules?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['AiringSchedule']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageAiringSchedulesArgs>
+  >;
+  characters?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Character']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageCharactersArgs>
+  >;
+  followers?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    RequireFields<PageFollowersArgs, 'userId'>
+  >;
+  following?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['User']>>>,
+    ParentType,
+    ContextType,
+    RequireFields<PageFollowingArgs, 'userId'>
+  >;
   likes?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<PageLikesArgs>>;
   media?: Resolver<Maybe<Array<Maybe<ResolversTypes['Media']>>>, ParentType, ContextType, Partial<PageMediaArgs>>;
-  mediaList?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaList']>>>, ParentType, ContextType, Partial<PageMediaListArgs>>;
-  mediaTrends?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaTrend']>>>, ParentType, ContextType, Partial<PageMediaTrendsArgs>>;
-  notifications?: Resolver<Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>, ParentType, ContextType, Partial<PageNotificationsArgs>>;
+  mediaList?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaList']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageMediaListArgs>
+  >;
+  mediaTrends?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaTrend']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageMediaTrendsArgs>
+  >;
+  notifications?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['NotificationUnion']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageNotificationsArgs>
+  >;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
-  recommendations?: Resolver<Maybe<Array<Maybe<ResolversTypes['Recommendation']>>>, ParentType, ContextType, Partial<PageRecommendationsArgs>>;
+  recommendations?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['Recommendation']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageRecommendationsArgs>
+  >;
   reviews?: Resolver<Maybe<Array<Maybe<ResolversTypes['Review']>>>, ParentType, ContextType, Partial<PageReviewsArgs>>;
   staff?: Resolver<Maybe<Array<Maybe<ResolversTypes['Staff']>>>, ParentType, ContextType, Partial<PageStaffArgs>>;
   studios?: Resolver<Maybe<Array<Maybe<ResolversTypes['Studio']>>>, ParentType, ContextType, Partial<PageStudiosArgs>>;
-  threadComments?: Resolver<Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>, ParentType, ContextType, Partial<PageThreadCommentsArgs>>;
+  threadComments?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>,
+    ParentType,
+    ContextType,
+    Partial<PageThreadCommentsArgs>
+  >;
   threads?: Resolver<Maybe<Array<Maybe<ResolversTypes['Thread']>>>, ParentType, ContextType, Partial<PageThreadsArgs>>;
   users?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType, Partial<PageUsersArgs>>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type PageInfoResolvers<ContextType = any, ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']> = ResolversObject<{
+export type PageInfoResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']
+> = ResolversObject<{
   currentPage?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   hasNextPage?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   lastPage?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -5868,42 +6391,106 @@ export type PageInfoResolvers<ContextType = any, ParentType extends ResolversPar
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ParsedMarkdownResolvers<ContextType = any, ParentType extends ResolversParentTypes['ParsedMarkdown'] = ResolversParentTypes['ParsedMarkdown']> = ResolversObject<{
+export type ParsedMarkdownResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ParsedMarkdown'] = ResolversParentTypes['ParsedMarkdown']
+> = ResolversObject<{
   html?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
+export type QueryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
+> = ResolversObject<{
   Activity?: Resolver<Maybe<ResolversTypes['ActivityUnion']>, ParentType, ContextType, Partial<QueryActivityArgs>>;
-  ActivityReply?: Resolver<Maybe<ResolversTypes['ActivityReply']>, ParentType, ContextType, Partial<QueryActivityReplyArgs>>;
-  AiringSchedule?: Resolver<Maybe<ResolversTypes['AiringSchedule']>, ParentType, ContextType, Partial<QueryAiringScheduleArgs>>;
+  ActivityReply?: Resolver<
+    Maybe<ResolversTypes['ActivityReply']>,
+    ParentType,
+    ContextType,
+    Partial<QueryActivityReplyArgs>
+  >;
+  AiringSchedule?: Resolver<
+    Maybe<ResolversTypes['AiringSchedule']>,
+    ParentType,
+    ContextType,
+    Partial<QueryAiringScheduleArgs>
+  >;
   AniChartUser?: Resolver<Maybe<ResolversTypes['AniChartUser']>, ParentType, ContextType>;
   Character?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType, Partial<QueryCharacterArgs>>;
-  ExternalLinkSourceCollection?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaExternalLink']>>>, ParentType, ContextType, Partial<QueryExternalLinkSourceCollectionArgs>>;
-  Follower?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryFollowerArgs, 'userId'>>;
-  Following?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryFollowingArgs, 'userId'>>;
+  ExternalLinkSourceCollection?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaExternalLink']>>>,
+    ParentType,
+    ContextType,
+    Partial<QueryExternalLinkSourceCollectionArgs>
+  >;
+  Follower?: Resolver<
+    Maybe<ResolversTypes['User']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryFollowerArgs, 'userId'>
+  >;
+  Following?: Resolver<
+    Maybe<ResolversTypes['User']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryFollowingArgs, 'userId'>
+  >;
   GenreCollection?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   Like?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<QueryLikeArgs>>;
-  Markdown?: Resolver<Maybe<ResolversTypes['ParsedMarkdown']>, ParentType, ContextType, RequireFields<QueryMarkdownArgs, 'markdown'>>;
+  Markdown?: Resolver<
+    Maybe<ResolversTypes['ParsedMarkdown']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryMarkdownArgs, 'markdown'>
+  >;
   Media?: Resolver<Maybe<ResolversTypes['Media']>, ParentType, ContextType, Partial<QueryMediaArgs>>;
   MediaList?: Resolver<Maybe<ResolversTypes['MediaList']>, ParentType, ContextType, Partial<QueryMediaListArgs>>;
-  MediaListCollection?: Resolver<Maybe<ResolversTypes['MediaListCollection']>, ParentType, ContextType, Partial<QueryMediaListCollectionArgs>>;
-  MediaTagCollection?: Resolver<Maybe<Array<Maybe<ResolversTypes['MediaTag']>>>, ParentType, ContextType, Partial<QueryMediaTagCollectionArgs>>;
+  MediaListCollection?: Resolver<
+    Maybe<ResolversTypes['MediaListCollection']>,
+    ParentType,
+    ContextType,
+    Partial<QueryMediaListCollectionArgs>
+  >;
+  MediaTagCollection?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['MediaTag']>>>,
+    ParentType,
+    ContextType,
+    Partial<QueryMediaTagCollectionArgs>
+  >;
   MediaTrend?: Resolver<Maybe<ResolversTypes['MediaTrend']>, ParentType, ContextType, Partial<QueryMediaTrendArgs>>;
-  Notification?: Resolver<Maybe<ResolversTypes['NotificationUnion']>, ParentType, ContextType, Partial<QueryNotificationArgs>>;
+  Notification?: Resolver<
+    Maybe<ResolversTypes['NotificationUnion']>,
+    ParentType,
+    ContextType,
+    Partial<QueryNotificationArgs>
+  >;
   Page?: Resolver<Maybe<ResolversTypes['Page']>, ParentType, ContextType, Partial<QueryPageArgs>>;
-  Recommendation?: Resolver<Maybe<ResolversTypes['Recommendation']>, ParentType, ContextType, Partial<QueryRecommendationArgs>>;
+  Recommendation?: Resolver<
+    Maybe<ResolversTypes['Recommendation']>,
+    ParentType,
+    ContextType,
+    Partial<QueryRecommendationArgs>
+  >;
   Review?: Resolver<Maybe<ResolversTypes['Review']>, ParentType, ContextType, Partial<QueryReviewArgs>>;
   SiteStatistics?: Resolver<Maybe<ResolversTypes['SiteStatistics']>, ParentType, ContextType>;
   Staff?: Resolver<Maybe<ResolversTypes['Staff']>, ParentType, ContextType, Partial<QueryStaffArgs>>;
   Studio?: Resolver<Maybe<ResolversTypes['Studio']>, ParentType, ContextType, Partial<QueryStudioArgs>>;
   Thread?: Resolver<Maybe<ResolversTypes['Thread']>, ParentType, ContextType, Partial<QueryThreadArgs>>;
-  ThreadComment?: Resolver<Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>, ParentType, ContextType, Partial<QueryThreadCommentArgs>>;
+  ThreadComment?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['ThreadComment']>>>,
+    ParentType,
+    ContextType,
+    Partial<QueryThreadCommentArgs>
+  >;
   User?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<QueryUserArgs>>;
   Viewer?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
 }>;
 
-export type RecommendationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Recommendation'] = ResolversParentTypes['Recommendation']> = ResolversObject<{
+export type RecommendationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Recommendation'] = ResolversParentTypes['Recommendation']
+> = ResolversObject<{
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   media?: Resolver<Maybe<ResolversTypes['Media']>, ParentType, ContextType>;
   mediaRecommendation?: Resolver<Maybe<ResolversTypes['Media']>, ParentType, ContextType>;
@@ -5913,19 +6500,28 @@ export type RecommendationResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type RecommendationConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['RecommendationConnection'] = ResolversParentTypes['RecommendationConnection']> = ResolversObject<{
+export type RecommendationConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RecommendationConnection'] = ResolversParentTypes['RecommendationConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['RecommendationEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Recommendation']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type RecommendationEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['RecommendationEdge'] = ResolversParentTypes['RecommendationEdge']> = ResolversObject<{
+export type RecommendationEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RecommendationEdge'] = ResolversParentTypes['RecommendationEdge']
+> = ResolversObject<{
   node?: Resolver<Maybe<ResolversTypes['Recommendation']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type RelatedMediaAdditionNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['RelatedMediaAdditionNotification'] = ResolversParentTypes['RelatedMediaAdditionNotification']> = ResolversObject<{
+export type RelatedMediaAdditionNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RelatedMediaAdditionNotification'] = ResolversParentTypes['RelatedMediaAdditionNotification']
+> = ResolversObject<{
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5935,7 +6531,10 @@ export type RelatedMediaAdditionNotificationResolvers<ContextType = any, ParentT
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ReportResolvers<ContextType = any, ParentType extends ResolversParentTypes['Report'] = ResolversParentTypes['Report']> = ResolversObject<{
+export type ReportResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Report'] = ResolversParentTypes['Report']
+> = ResolversObject<{
   cleared?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5945,7 +6544,10 @@ export type ReportResolvers<ContextType = any, ParentType extends ResolversParen
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ReviewResolvers<ContextType = any, ParentType extends ResolversParentTypes['Review'] = ResolversParentTypes['Review']> = ResolversObject<{
+export type ReviewResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Review'] = ResolversParentTypes['Review']
+> = ResolversObject<{
   body?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<ReviewBodyArgs>>;
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -5965,19 +6567,28 @@ export type ReviewResolvers<ContextType = any, ParentType extends ResolversParen
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ReviewConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ReviewConnection'] = ResolversParentTypes['ReviewConnection']> = ResolversObject<{
+export type ReviewConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ReviewConnection'] = ResolversParentTypes['ReviewConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['ReviewEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Review']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ReviewEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['ReviewEdge'] = ResolversParentTypes['ReviewEdge']> = ResolversObject<{
+export type ReviewEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ReviewEdge'] = ResolversParentTypes['ReviewEdge']
+> = ResolversObject<{
   node?: Resolver<Maybe<ResolversTypes['Review']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type RevisionHistoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['RevisionHistory'] = ResolversParentTypes['RevisionHistory']> = ResolversObject<{
+export type RevisionHistoryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RevisionHistory'] = ResolversParentTypes['RevisionHistory']
+> = ResolversObject<{
   action?: Resolver<Maybe<ResolversTypes['RevisionHistoryAction']>, ParentType, ContextType>;
   changes?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   character?: Resolver<Maybe<ResolversTypes['Character']>, ParentType, ContextType>;
@@ -5991,47 +6602,110 @@ export type RevisionHistoryResolvers<ContextType = any, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ScoreDistributionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ScoreDistribution'] = ResolversParentTypes['ScoreDistribution']> = ResolversObject<{
+export type ScoreDistributionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ScoreDistribution'] = ResolversParentTypes['ScoreDistribution']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   score?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type SiteStatisticsResolvers<ContextType = any, ParentType extends ResolversParentTypes['SiteStatistics'] = ResolversParentTypes['SiteStatistics']> = ResolversObject<{
-  anime?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsAnimeArgs>>;
-  characters?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsCharactersArgs>>;
-  manga?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsMangaArgs>>;
-  reviews?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsReviewsArgs>>;
-  staff?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsStaffArgs>>;
-  studios?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsStudiosArgs>>;
-  users?: Resolver<Maybe<ResolversTypes['SiteTrendConnection']>, ParentType, ContextType, Partial<SiteStatisticsUsersArgs>>;
+export type SiteStatisticsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['SiteStatistics'] = ResolversParentTypes['SiteStatistics']
+> = ResolversObject<{
+  anime?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsAnimeArgs>
+  >;
+  characters?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsCharactersArgs>
+  >;
+  manga?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsMangaArgs>
+  >;
+  reviews?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsReviewsArgs>
+  >;
+  staff?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsStaffArgs>
+  >;
+  studios?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsStudiosArgs>
+  >;
+  users?: Resolver<
+    Maybe<ResolversTypes['SiteTrendConnection']>,
+    ParentType,
+    ContextType,
+    Partial<SiteStatisticsUsersArgs>
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type SiteTrendResolvers<ContextType = any, ParentType extends ResolversParentTypes['SiteTrend'] = ResolversParentTypes['SiteTrend']> = ResolversObject<{
+export type SiteTrendResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['SiteTrend'] = ResolversParentTypes['SiteTrend']
+> = ResolversObject<{
   change?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   date?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type SiteTrendConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['SiteTrendConnection'] = ResolversParentTypes['SiteTrendConnection']> = ResolversObject<{
+export type SiteTrendConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['SiteTrendConnection'] = ResolversParentTypes['SiteTrendConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['SiteTrendEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['SiteTrend']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type SiteTrendEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['SiteTrendEdge'] = ResolversParentTypes['SiteTrendEdge']> = ResolversObject<{
+export type SiteTrendEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['SiteTrendEdge'] = ResolversParentTypes['SiteTrendEdge']
+> = ResolversObject<{
   node?: Resolver<Maybe<ResolversTypes['SiteTrend']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffResolvers<ContextType = any, ParentType extends ResolversParentTypes['Staff'] = ResolversParentTypes['Staff']> = ResolversObject<{
+export type StaffResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Staff'] = ResolversParentTypes['Staff']
+> = ResolversObject<{
   age?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   bloodType?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  characterMedia?: Resolver<Maybe<ResolversTypes['MediaConnection']>, ParentType, ContextType, Partial<StaffCharacterMediaArgs>>;
-  characters?: Resolver<Maybe<ResolversTypes['CharacterConnection']>, ParentType, ContextType, Partial<StaffCharactersArgs>>;
+  characterMedia?: Resolver<
+    Maybe<ResolversTypes['MediaConnection']>,
+    ParentType,
+    ContextType,
+    Partial<StaffCharacterMediaArgs>
+  >;
+  characters?: Resolver<
+    Maybe<ResolversTypes['CharacterConnection']>,
+    ParentType,
+    ContextType,
+    Partial<StaffCharactersArgs>
+  >;
   dateOfBirth?: Resolver<Maybe<ResolversTypes['FuzzyDate']>, ParentType, ContextType>;
   dateOfDeath?: Resolver<Maybe<ResolversTypes['FuzzyDate']>, ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<StaffDescriptionArgs>>;
@@ -6049,7 +6723,12 @@ export type StaffResolvers<ContextType = any, ParentType extends ResolversParent
   primaryOccupations?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   siteUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   staff?: Resolver<Maybe<ResolversTypes['Staff']>, ParentType, ContextType>;
-  staffMedia?: Resolver<Maybe<ResolversTypes['MediaConnection']>, ParentType, ContextType, Partial<StaffStaffMediaArgs>>;
+  staffMedia?: Resolver<
+    Maybe<ResolversTypes['MediaConnection']>,
+    ParentType,
+    ContextType,
+    Partial<StaffStaffMediaArgs>
+  >;
   submissionNotes?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   submissionStatus?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   submitter?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
@@ -6058,14 +6737,20 @@ export type StaffResolvers<ContextType = any, ParentType extends ResolversParent
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffConnection'] = ResolversParentTypes['StaffConnection']> = ResolversObject<{
+export type StaffConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffConnection'] = ResolversParentTypes['StaffConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Staff']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffEdge'] = ResolversParentTypes['StaffEdge']> = ResolversObject<{
+export type StaffEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffEdge'] = ResolversParentTypes['StaffEdge']
+> = ResolversObject<{
   favouriteOrder?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   node?: Resolver<Maybe<ResolversTypes['Staff']>, ParentType, ContextType>;
@@ -6073,13 +6758,19 @@ export type StaffEdgeResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffImageResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffImage'] = ResolversParentTypes['StaffImage']> = ResolversObject<{
+export type StaffImageResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffImage'] = ResolversParentTypes['StaffImage']
+> = ResolversObject<{
   large?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   medium?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffNameResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffName'] = ResolversParentTypes['StaffName']> = ResolversObject<{
+export type StaffNameResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffName'] = ResolversParentTypes['StaffName']
+> = ResolversObject<{
   alternative?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
   first?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   full?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6090,14 +6781,20 @@ export type StaffNameResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffRoleTypeResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffRoleType'] = ResolversParentTypes['StaffRoleType']> = ResolversObject<{
+export type StaffRoleTypeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffRoleType'] = ResolversParentTypes['StaffRoleType']
+> = ResolversObject<{
   dubGroup?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   roleNotes?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   voiceActor?: Resolver<Maybe<ResolversTypes['Staff']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffStats'] = ResolversParentTypes['StaffStats']> = ResolversObject<{
+export type StaffStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffStats'] = ResolversParentTypes['StaffStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   staff?: Resolver<Maybe<ResolversTypes['Staff']>, ParentType, ContextType>;
@@ -6105,7 +6802,10 @@ export type StaffStatsResolvers<ContextType = any, ParentType extends ResolversP
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StaffSubmissionResolvers<ContextType = any, ParentType extends ResolversParentTypes['StaffSubmission'] = ResolversParentTypes['StaffSubmission']> = ResolversObject<{
+export type StaffSubmissionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StaffSubmission'] = ResolversParentTypes['StaffSubmission']
+> = ResolversObject<{
   assignee?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -6119,13 +6819,19 @@ export type StaffSubmissionResolvers<ContextType = any, ParentType extends Resol
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StatusDistributionResolvers<ContextType = any, ParentType extends ResolversParentTypes['StatusDistribution'] = ResolversParentTypes['StatusDistribution']> = ResolversObject<{
+export type StatusDistributionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StatusDistribution'] = ResolversParentTypes['StatusDistribution']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   status?: Resolver<Maybe<ResolversTypes['MediaListStatus']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StudioResolvers<ContextType = any, ParentType extends ResolversParentTypes['Studio'] = ResolversParentTypes['Studio']> = ResolversObject<{
+export type StudioResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Studio'] = ResolversParentTypes['Studio']
+> = ResolversObject<{
   favourites?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   isAnimationStudio?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
@@ -6136,14 +6842,20 @@ export type StudioResolvers<ContextType = any, ParentType extends ResolversParen
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StudioConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['StudioConnection'] = ResolversParentTypes['StudioConnection']> = ResolversObject<{
+export type StudioConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StudioConnection'] = ResolversParentTypes['StudioConnection']
+> = ResolversObject<{
   edges?: Resolver<Maybe<Array<Maybe<ResolversTypes['StudioEdge']>>>, ParentType, ContextType>;
   nodes?: Resolver<Maybe<Array<Maybe<ResolversTypes['Studio']>>>, ParentType, ContextType>;
   pageInfo?: Resolver<Maybe<ResolversTypes['PageInfo']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StudioEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['StudioEdge'] = ResolversParentTypes['StudioEdge']> = ResolversObject<{
+export type StudioEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StudioEdge'] = ResolversParentTypes['StudioEdge']
+> = ResolversObject<{
   favouriteOrder?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   isMain?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
@@ -6151,7 +6863,10 @@ export type StudioEdgeResolvers<ContextType = any, ParentType extends ResolversP
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type StudioStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['StudioStats'] = ResolversParentTypes['StudioStats']> = ResolversObject<{
+export type StudioStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['StudioStats'] = ResolversParentTypes['StudioStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   studio?: Resolver<Maybe<ResolversTypes['Studio']>, ParentType, ContextType>;
@@ -6159,7 +6874,10 @@ export type StudioStatsResolvers<ContextType = any, ParentType extends Resolvers
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type TagStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['TagStats'] = ResolversParentTypes['TagStats']> = ResolversObject<{
+export type TagStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['TagStats'] = ResolversParentTypes['TagStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   tag?: Resolver<Maybe<ResolversTypes['MediaTag']>, ParentType, ContextType>;
@@ -6167,7 +6885,10 @@ export type TagStatsResolvers<ContextType = any, ParentType extends ResolversPar
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type TextActivityResolvers<ContextType = any, ParentType extends ResolversParentTypes['TextActivity'] = ResolversParentTypes['TextActivity']> = ResolversObject<{
+export type TextActivityResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['TextActivity'] = ResolversParentTypes['TextActivity']
+> = ResolversObject<{
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   isLiked?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
@@ -6186,7 +6907,10 @@ export type TextActivityResolvers<ContextType = any, ParentType extends Resolver
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadResolvers<ContextType = any, ParentType extends ResolversParentTypes['Thread'] = ResolversParentTypes['Thread']> = ResolversObject<{
+export type ThreadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Thread'] = ResolversParentTypes['Thread']
+> = ResolversObject<{
   body?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<ThreadBodyArgs>>;
   categories?: Resolver<Maybe<Array<Maybe<ResolversTypes['ThreadCategory']>>>, ParentType, ContextType>;
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -6212,13 +6936,19 @@ export type ThreadResolvers<ContextType = any, ParentType extends ResolversParen
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCategoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadCategory'] = ResolversParentTypes['ThreadCategory']> = ResolversObject<{
+export type ThreadCategoryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadCategory'] = ResolversParentTypes['ThreadCategory']
+> = ResolversObject<{
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCommentResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadComment'] = ResolversParentTypes['ThreadComment']> = ResolversObject<{
+export type ThreadCommentResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadComment'] = ResolversParentTypes['ThreadComment']
+> = ResolversObject<{
   childComments?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   comment?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<ThreadCommentCommentArgs>>;
   createdAt?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -6236,7 +6966,10 @@ export type ThreadCommentResolvers<ContextType = any, ParentType extends Resolve
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCommentLikeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadCommentLikeNotification'] = ResolversParentTypes['ThreadCommentLikeNotification']> = ResolversObject<{
+export type ThreadCommentLikeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadCommentLikeNotification'] = ResolversParentTypes['ThreadCommentLikeNotification']
+> = ResolversObject<{
   comment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType>;
   commentId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6249,7 +6982,10 @@ export type ThreadCommentLikeNotificationResolvers<ContextType = any, ParentType
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCommentMentionNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadCommentMentionNotification'] = ResolversParentTypes['ThreadCommentMentionNotification']> = ResolversObject<{
+export type ThreadCommentMentionNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadCommentMentionNotification'] = ResolversParentTypes['ThreadCommentMentionNotification']
+> = ResolversObject<{
   comment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType>;
   commentId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6262,7 +6998,10 @@ export type ThreadCommentMentionNotificationResolvers<ContextType = any, ParentT
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCommentReplyNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadCommentReplyNotification'] = ResolversParentTypes['ThreadCommentReplyNotification']> = ResolversObject<{
+export type ThreadCommentReplyNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadCommentReplyNotification'] = ResolversParentTypes['ThreadCommentReplyNotification']
+> = ResolversObject<{
   comment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType>;
   commentId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6275,7 +7014,10 @@ export type ThreadCommentReplyNotificationResolvers<ContextType = any, ParentTyp
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadCommentSubscribedNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadCommentSubscribedNotification'] = ResolversParentTypes['ThreadCommentSubscribedNotification']> = ResolversObject<{
+export type ThreadCommentSubscribedNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadCommentSubscribedNotification'] = ResolversParentTypes['ThreadCommentSubscribedNotification']
+> = ResolversObject<{
   comment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType>;
   commentId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6288,7 +7030,10 @@ export type ThreadCommentSubscribedNotificationResolvers<ContextType = any, Pare
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type ThreadLikeNotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['ThreadLikeNotification'] = ResolversParentTypes['ThreadLikeNotification']> = ResolversObject<{
+export type ThreadLikeNotificationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ThreadLikeNotification'] = ResolversParentTypes['ThreadLikeNotification']
+> = ResolversObject<{
   comment?: Resolver<Maybe<ResolversTypes['ThreadComment']>, ParentType, ContextType>;
   context?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -6301,7 +7046,10 @@ export type ThreadLikeNotificationResolvers<ContextType = any, ParentType extend
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = ResolversObject<{
+export type UserResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
+> = ResolversObject<{
   about?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<UserAboutArgs>>;
   avatar?: Resolver<Maybe<ResolversTypes['UserAvatar']>, ParentType, ContextType>;
   bannerImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6328,20 +7076,29 @@ export type UserResolvers<ContextType = any, ParentType extends ResolversParentT
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserActivityHistoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserActivityHistory'] = ResolversParentTypes['UserActivityHistory']> = ResolversObject<{
+export type UserActivityHistoryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserActivityHistory'] = ResolversParentTypes['UserActivityHistory']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   date?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   level?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserAvatarResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserAvatar'] = ResolversParentTypes['UserAvatar']> = ResolversObject<{
+export type UserAvatarResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserAvatar'] = ResolversParentTypes['UserAvatar']
+> = ResolversObject<{
   large?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   medium?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserCountryStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserCountryStatistic'] = ResolversParentTypes['UserCountryStatistic']> = ResolversObject<{
+export type UserCountryStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserCountryStatistic'] = ResolversParentTypes['UserCountryStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   country?: Resolver<Maybe<ResolversTypes['CountryCode']>, ParentType, ContextType>;
@@ -6351,7 +7108,10 @@ export type UserCountryStatisticResolvers<ContextType = any, ParentType extends 
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserFormatStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserFormatStatistic'] = ResolversParentTypes['UserFormatStatistic']> = ResolversObject<{
+export type UserFormatStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserFormatStatistic'] = ResolversParentTypes['UserFormatStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   format?: Resolver<Maybe<ResolversTypes['MediaFormat']>, ParentType, ContextType>;
@@ -6361,7 +7121,10 @@ export type UserFormatStatisticResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserGenreStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserGenreStatistic'] = ResolversParentTypes['UserGenreStatistic']> = ResolversObject<{
+export type UserGenreStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserGenreStatistic'] = ResolversParentTypes['UserGenreStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   genre?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6371,7 +7134,10 @@ export type UserGenreStatisticResolvers<ContextType = any, ParentType extends Re
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserLengthStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserLengthStatistic'] = ResolversParentTypes['UserLengthStatistic']> = ResolversObject<{
+export type UserLengthStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserLengthStatistic'] = ResolversParentTypes['UserLengthStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   length?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -6381,7 +7147,10 @@ export type UserLengthStatisticResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserModDataResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserModData'] = ResolversParentTypes['UserModData']> = ResolversObject<{
+export type UserModDataResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserModData'] = ResolversParentTypes['UserModData']
+> = ResolversObject<{
   alts?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType>;
   bans?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
   counts?: Resolver<Maybe<ResolversTypes['Json']>, ParentType, ContextType>;
@@ -6391,7 +7160,10 @@ export type UserModDataResolvers<ContextType = any, ParentType extends Resolvers
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserOptionsResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserOptions'] = ResolversParentTypes['UserOptions']> = ResolversObject<{
+export type UserOptionsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserOptions'] = ResolversParentTypes['UserOptions']
+> = ResolversObject<{
   activityMergeTime?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   airingNotifications?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   disabledListActivity?: Resolver<Maybe<Array<Maybe<ResolversTypes['ListActivityOption']>>>, ParentType, ContextType>;
@@ -6405,14 +7177,20 @@ export type UserOptionsResolvers<ContextType = any, ParentType extends Resolvers
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserPreviousNameResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserPreviousName'] = ResolversParentTypes['UserPreviousName']> = ResolversObject<{
+export type UserPreviousNameResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserPreviousName'] = ResolversParentTypes['UserPreviousName']
+> = ResolversObject<{
   createdAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   updatedAt?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserReleaseYearStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserReleaseYearStatistic'] = ResolversParentTypes['UserReleaseYearStatistic']> = ResolversObject<{
+export type UserReleaseYearStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserReleaseYearStatistic'] = ResolversParentTypes['UserReleaseYearStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6422,7 +7200,10 @@ export type UserReleaseYearStatisticResolvers<ContextType = any, ParentType exte
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserScoreStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserScoreStatistic'] = ResolversParentTypes['UserScoreStatistic']> = ResolversObject<{
+export type UserScoreStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserScoreStatistic'] = ResolversParentTypes['UserScoreStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6432,7 +7213,10 @@ export type UserScoreStatisticResolvers<ContextType = any, ParentType extends Re
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStaffStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStaffStatistic'] = ResolversParentTypes['UserStaffStatistic']> = ResolversObject<{
+export type UserStaffStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStaffStatistic'] = ResolversParentTypes['UserStaffStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6442,7 +7226,10 @@ export type UserStaffStatisticResolvers<ContextType = any, ParentType extends Re
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStartYearStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStartYearStatistic'] = ResolversParentTypes['UserStartYearStatistic']> = ResolversObject<{
+export type UserStartYearStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStartYearStatistic'] = ResolversParentTypes['UserStartYearStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6452,40 +7239,113 @@ export type UserStartYearStatisticResolvers<ContextType = any, ParentType extend
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStatisticTypesResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStatisticTypes'] = ResolversParentTypes['UserStatisticTypes']> = ResolversObject<{
+export type UserStatisticTypesResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStatisticTypes'] = ResolversParentTypes['UserStatisticTypes']
+> = ResolversObject<{
   anime?: Resolver<Maybe<ResolversTypes['UserStatistics']>, ParentType, ContextType>;
   manga?: Resolver<Maybe<ResolversTypes['UserStatistics']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStatisticsResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStatistics'] = ResolversParentTypes['UserStatistics']> = ResolversObject<{
+export type UserStatisticsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStatistics'] = ResolversParentTypes['UserStatistics']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  countries?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserCountryStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsCountriesArgs>>;
+  countries?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserCountryStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsCountriesArgs>
+  >;
   episodesWatched?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  formats?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserFormatStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsFormatsArgs>>;
-  genres?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserGenreStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsGenresArgs>>;
-  lengths?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserLengthStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsLengthsArgs>>;
+  formats?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserFormatStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsFormatsArgs>
+  >;
+  genres?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserGenreStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsGenresArgs>
+  >;
+  lengths?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserLengthStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsLengthsArgs>
+  >;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   minutesWatched?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  releaseYears?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserReleaseYearStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsReleaseYearsArgs>>;
-  scores?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserScoreStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsScoresArgs>>;
-  staff?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserStaffStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsStaffArgs>>;
+  releaseYears?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserReleaseYearStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsReleaseYearsArgs>
+  >;
+  scores?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserScoreStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsScoresArgs>
+  >;
+  staff?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserStaffStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsStaffArgs>
+  >;
   standardDeviation?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
-  startYears?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserStartYearStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsStartYearsArgs>>;
-  statuses?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserStatusStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsStatusesArgs>>;
-  studios?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserStudioStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsStudiosArgs>>;
-  tags?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserTagStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsTagsArgs>>;
-  voiceActors?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserVoiceActorStatistic']>>>, ParentType, ContextType, Partial<UserStatisticsVoiceActorsArgs>>;
+  startYears?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserStartYearStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsStartYearsArgs>
+  >;
+  statuses?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserStatusStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsStatusesArgs>
+  >;
+  studios?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserStudioStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsStudiosArgs>
+  >;
+  tags?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserTagStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsTagsArgs>
+  >;
+  voiceActors?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['UserVoiceActorStatistic']>>>,
+    ParentType,
+    ContextType,
+    Partial<UserStatisticsVoiceActorsArgs>
+  >;
   volumesRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStats'] = ResolversParentTypes['UserStats']> = ResolversObject<{
+export type UserStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStats'] = ResolversParentTypes['UserStats']
+> = ResolversObject<{
   activityHistory?: Resolver<Maybe<Array<Maybe<ResolversTypes['UserActivityHistory']>>>, ParentType, ContextType>;
   animeListScores?: Resolver<Maybe<ResolversTypes['ListScoreStats']>, ParentType, ContextType>;
   animeScoreDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['ScoreDistribution']>>>, ParentType, ContextType>;
-  animeStatusDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['StatusDistribution']>>>, ParentType, ContextType>;
+  animeStatusDistribution?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['StatusDistribution']>>>,
+    ParentType,
+    ContextType
+  >;
   chaptersRead?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   favouredActors?: Resolver<Maybe<Array<Maybe<ResolversTypes['StaffStats']>>>, ParentType, ContextType>;
   favouredFormats?: Resolver<Maybe<Array<Maybe<ResolversTypes['FormatStats']>>>, ParentType, ContextType>;
@@ -6497,12 +7357,19 @@ export type UserStatsResolvers<ContextType = any, ParentType extends ResolversPa
   favouredYears?: Resolver<Maybe<Array<Maybe<ResolversTypes['YearStats']>>>, ParentType, ContextType>;
   mangaListScores?: Resolver<Maybe<ResolversTypes['ListScoreStats']>, ParentType, ContextType>;
   mangaScoreDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['ScoreDistribution']>>>, ParentType, ContextType>;
-  mangaStatusDistribution?: Resolver<Maybe<Array<Maybe<ResolversTypes['StatusDistribution']>>>, ParentType, ContextType>;
+  mangaStatusDistribution?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['StatusDistribution']>>>,
+    ParentType,
+    ContextType
+  >;
   watchedTime?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStatusStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStatusStatistic'] = ResolversParentTypes['UserStatusStatistic']> = ResolversObject<{
+export type UserStatusStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStatusStatistic'] = ResolversParentTypes['UserStatusStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6512,7 +7379,10 @@ export type UserStatusStatisticResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserStudioStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserStudioStatistic'] = ResolversParentTypes['UserStudioStatistic']> = ResolversObject<{
+export type UserStudioStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserStudioStatistic'] = ResolversParentTypes['UserStudioStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6522,7 +7392,10 @@ export type UserStudioStatisticResolvers<ContextType = any, ParentType extends R
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserTagStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserTagStatistic'] = ResolversParentTypes['UserTagStatistic']> = ResolversObject<{
+export type UserTagStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserTagStatistic'] = ResolversParentTypes['UserTagStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   meanScore?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
@@ -6532,7 +7405,10 @@ export type UserTagStatisticResolvers<ContextType = any, ParentType extends Reso
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type UserVoiceActorStatisticResolvers<ContextType = any, ParentType extends ResolversParentTypes['UserVoiceActorStatistic'] = ResolversParentTypes['UserVoiceActorStatistic']> = ResolversObject<{
+export type UserVoiceActorStatisticResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UserVoiceActorStatistic'] = ResolversParentTypes['UserVoiceActorStatistic']
+> = ResolversObject<{
   chaptersRead?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   characterIds?: Resolver<Array<Maybe<ResolversTypes['Int']>>, ParentType, ContextType>;
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -6543,7 +7419,10 @@ export type UserVoiceActorStatisticResolvers<ContextType = any, ParentType exten
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
-export type YearStatsResolvers<ContextType = any, ParentType extends ResolversParentTypes['YearStats'] = ResolversParentTypes['YearStats']> = ResolversObject<{
+export type YearStatsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['YearStats'] = ResolversParentTypes['YearStats']
+> = ResolversObject<{
   amount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   meanScore?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   year?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -6682,4 +7561,3 @@ export type Resolvers<ContextType = any> = ResolversObject<{
   UserVoiceActorStatistic?: UserVoiceActorStatisticResolvers<ContextType>;
   YearStats?: YearStatsResolvers<ContextType>;
 }>;
-

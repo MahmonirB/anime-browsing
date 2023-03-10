@@ -11,11 +11,11 @@
  * The current releasing status of the media
  */
 export enum MediaStatus {
-  CANCELLED = "CANCELLED",
-  FINISHED = "FINISHED",
-  HIATUS = "HIATUS",
-  NOT_YET_RELEASED = "NOT_YET_RELEASED",
-  RELEASING = "RELEASING",
+  CANCELLED = 'CANCELLED',
+  FINISHED = 'FINISHED',
+  HIATUS = 'HIATUS',
+  NOT_YET_RELEASED = 'NOT_YET_RELEASED',
+  RELEASING = 'RELEASING',
 }
 
 //==============================================================

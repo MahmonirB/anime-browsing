@@ -3,14 +3,14 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { MediaStatus } from "./../../../../__generated__/globalTypes";
+import { MediaStatus } from './../../../../__generated__/globalTypes';
 
 // ====================================================
 // GraphQL query operation: MEDIA_QUERY
 // ====================================================
 
 export interface MEDIA_QUERY_Page_pageInfo {
-  __typename: "PageInfo";
+  __typename: 'PageInfo';
   /**
    * The total number of items. Note: This value is not guaranteed to be accurate, do not rely on this for logic
    */
@@ -34,7 +34,7 @@ export interface MEDIA_QUERY_Page_pageInfo {
 }
 
 export interface MEDIA_QUERY_Page_media_title {
-  __typename: "MediaTitle";
+  __typename: 'MediaTitle';
   /**
    * The official english title
    */
@@ -42,7 +42,7 @@ export interface MEDIA_QUERY_Page_media_title {
 }
 
 export interface MEDIA_QUERY_Page_media_coverImage {
-  __typename: "MediaCoverImage";
+  __typename: 'MediaCoverImage';
   /**
    * Average #hex color of cover image
    */
@@ -54,7 +54,7 @@ export interface MEDIA_QUERY_Page_media_coverImage {
 }
 
 export interface MEDIA_QUERY_Page_media {
-  __typename: "Media";
+  __typename: 'Media';
   /**
    * The id of the media
    */
@@ -98,7 +98,7 @@ export interface MEDIA_QUERY_Page_media {
 }
 
 export interface MEDIA_QUERY_Page {
-  __typename: "Page";
+  __typename: 'Page';
   /**
    * The pagination information
    */

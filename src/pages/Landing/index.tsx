@@ -25,7 +25,7 @@ const GET_TOKEN = gql`
 
 function Landing() {
   const { data } = useQuery(GENRE_COLLECTION);
-  const [authToken, setAuthToken] = useRecoilState(authenticationData)
+  const [authToken, setAuthToken] = useRecoilState(authenticationData);
 
   useEffect(() => {
     client.query({ query: GET_TOKEN }).then(response => {

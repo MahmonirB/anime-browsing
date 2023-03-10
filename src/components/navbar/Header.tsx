@@ -8,26 +8,29 @@ function Header() {
 
   const toggleNavbar = () => setShowNavbar(prev => !prev);
 
-  const linkClasses = "p-1 lg:px-4 md:mx-2 text-gray-600 dark:text-gray-300 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300";
+  const linkClasses =
+    'p-1 lg:px-4 md:mx-2 text-gray-600 dark:text-gray-300 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300';
 
   return (
     <div className="header-2">
-      <nav className="bg-white dark:bg-stone-800  py-5 md:py-4">
+      <nav className="bg-white py-5  dark:bg-stone-800 md:py-4">
         <div className="w-full md:mx-auto md:flex md:items-center">
-          <div className="flex justify-between items-center ml-3">
-            <a href="#" className="font-bold text-xl text-indigo-900 dark:text-indigo-500">
+          <div className="ml-3 flex items-center justify-between">
+            <a href="#" className="text-xl font-bold text-indigo-900 dark:text-indigo-500">
               AnimeSuche
             </a>
             <button
               onClick={toggleNavbar}
-              className=" border-none px-3 py-1 rounded text-gray-600 dark:text-gray-300 opacity-50 hover:opacity-75 md:hidden"
+              className=" rounded border-none px-3 py-1 text-gray-600 opacity-50 hover:opacity-75 dark:text-gray-300 md:hidden"
             >
               <FontAwesomeIcon icon={faBars} />
             </button>
           </div>
 
           <div
-            className={`md:flex items-center flex-col md:flex-row md:ml-auto mt-2 p-2 md:mt-0 w-full bg-white dark:bg-stone-800 dark:border-b absolute md:relative md:w-1/2 transition duration-900 ${showNavbar ? 'flex' : 'hidden'}`}
+            className={`duration-900 absolute mt-2 w-full flex-col items-center bg-white p-2 transition dark:border-b dark:bg-stone-800 md:relative md:ml-auto md:mt-0 md:flex md:w-1/2 md:flex-row ${
+              showNavbar ? 'flex' : 'hidden'
+            }`}
             id="navbar-collapse"
           >
             <a href="#" className={linkClasses}>
@@ -42,7 +45,7 @@ function Header() {
             <a href="#" className={linkClasses}>
               Contact
             </a>
-            <a href="#" className="p-2 lg:px-4 md:mx-2 text-white dark:text-gray-300 rounded bg-indigo-900">
+            <a href="#" className="rounded bg-indigo-900 p-2 text-white dark:text-gray-300 md:mx-2 lg:px-4">
               Home
             </a>
           </div>

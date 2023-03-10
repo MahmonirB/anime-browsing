@@ -8,7 +8,7 @@
 // ====================================================
 
 export interface Query_Viewer {
-  __typename: "User";
+  __typename: 'User';
   /**
    * The name of the user
    */

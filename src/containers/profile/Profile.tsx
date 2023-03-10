@@ -4,12 +4,13 @@ import { useRecoilState } from 'recoil';
 import { userData } from '../../store';
 
 const PROFILE = gql`
-query Query {
-  Viewer {
-    name
-    id
+  query Query {
+    Viewer {
+      name
+      id
+    }
   }
-}`;
+`;
 
 function Profile() {
   const { data } = useQuery(PROFILE);
@@ -21,9 +22,13 @@ function Profile() {
     setRecoilState(userInfo);
   }, [data]);
 
-  return <div className='flex justify-center items-center w-full h-40'>
-    <h2>Dear <span className=' font-bold'>{userInfo?.name}</span> welcome!</h2>
-  </div>
+  return (
+    <div className="flex h-40 w-full items-center justify-center">
+      <h2>
+        Dear <span className=" font-bold">{userInfo?.name}</span> welcome!
+      </h2>
+    </div>
+  );
 }
 
 export default Profile;

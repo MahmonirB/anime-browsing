@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom';
 
 function SearchPanel({ isAuthenticated }: { isAuthenticated: boolean }) {
   return (
-    <div className="py-12 md:py-12 md:flex md:h-half">
-      <div className="container px-4 mx-auto">
-        <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-medium mb-5">Get list of Animations, find the newest.</h1>
+    <div className="py-12 md:flex md:h-half md:py-12">
+      <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="mb-5 text-3xl font-medium md:text-4xl">Get list of Animations, find the newest.</h1>
           {/* <a href="http://localhost:3001/login" className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</a> */}
-          {!isAuthenticated ?
-            <Link to={'/signin'} className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Get Started</Link>
-            :
-            <Link to={'/profile'} className="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl mt-6">Profile</Link>
-          }
+          {!isAuthenticated ? (
+            <Link to={'/signin'} className="mt-6 rounded-full bg-indigo-600 py-2 px-6 text-xl text-white">
+              Get Started
+            </Link>
+          ) : (
+            <Link to={'/profile'} className="mt-6 rounded-full bg-indigo-600 py-2 px-6 text-xl text-white">
+              Profile
+            </Link>
+          )}
         </div>
-        <div className="bg-[url('/img/landing.png')] bg-contain bg-no-repeat bg-center h-40 md:h-40" />
+        <div className="h-40 bg-[url('/img/landing.png')] bg-contain bg-center bg-no-repeat md:h-40" />
       </div>
     </div>
   );
