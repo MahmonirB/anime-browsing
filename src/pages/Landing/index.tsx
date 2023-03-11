@@ -1,3 +1,4 @@
+/* eslint-disable graphql/template-strings */
 import { gql, useQuery } from '@apollo/client';
 import { useEffect } from 'react';
 import Header from 'src/components/navbar/Header';
