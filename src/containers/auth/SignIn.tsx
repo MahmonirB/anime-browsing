@@ -4,10 +4,16 @@ import { ReactComponent as GoogleSvg } from '@assets/google.svg';
 import { ReactComponent as GithubSvg } from '@assets/github.svg';
 import { ReactComponent as AnilistSvg } from '@assets/anilist.svg';
 import Spinner from 'src/components/spinner/Spinner';
+import { REST_API_URL } from '@config/constants';
+
+const GITHUB_LOGIN_URL = `https://github.com/login/oauth/authorize?client_id=${
+  import.meta.env.VITE_GITHUB_CLIENT_ID
+}&redirect_uri=${import.meta.env.VITE_GITHUB_REDIRECT_URL}`;
+
+const COMMON_CLASSNAMES =
+  'px-7 py-3 mb-4 font-bold text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-evenly items-center';
 
 function SignIn() {
-  const linkClass =
-    'px-7 py-3 mb-4 font-bold text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-evenly items-center';
   return (
     <section className="h-screen">
       <div className="h-full px-6 py-12">
@@ -20,8 +26,8 @@ function SignIn() {
           <div className="md:w-1/2 lg:ml-20 lg:w-1/3">
             <form>
               <a
-                className={`bg-blue-500 text-white ${linkClass}`}
-                href={`http://localhost:3001/login`}
+                className={`bg-blue-500 text-white ${COMMON_CLASSNAMES}`}
+                href={`${REST_API_URL}/login`}
                 role="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
@@ -32,13 +38,11 @@ function SignIn() {
                 <label>Continue with AniList</label>
               </a>
               <a
-                className={`bg-blue-700 text-white ${linkClass}`}
+                className={`bg-blue-700 text-white ${COMMON_CLASSNAMES}`}
                 role="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
-                href={`https://github.com/login/oauth/authorize?client_id=${
-                  import.meta.env.VITE_GITHUB_CLIENT_ID
-                }&redirect_uri=${import.meta.env.VITE_GITHUB_REDIRECT_URL}`}
+                href={GITHUB_LOGIN_URL}
               >
                 <Suspense fallback={<Spinner />}>
                   <GithubSvg width={30} />
@@ -46,7 +50,7 @@ function SignIn() {
                 <label> Continue with Github</label>
               </a>
               <a
-                className={`cursor-not-allowed text-gray-300 hover:text-gray-300 ${linkClass}`}
+                className={`cursor-not-allowed text-gray-300 hover:text-gray-300 ${COMMON_CLASSNAMES}`}
                 href="#!"
                 style={{ backgroundColor: 'mintcream' }}
                 role="button"

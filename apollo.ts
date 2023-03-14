@@ -1,5 +1,5 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import { API_URL } from './config/constants';
+import { API_URL, REST_API_URL } from './config/constants';
 import { RestLink } from 'apollo-link-rest';
 import { setContext } from '@apollo/client/link/context';
 
@@ -26,5 +26,5 @@ export const client = new ApolloClient({
 });
 
 export const restLink = new RestLink({
-  uri: 'http://localhost:3001',
+  uri: REST_API_URL,
 });
