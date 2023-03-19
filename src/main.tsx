@@ -9,6 +9,7 @@ import Media from './containers/media/Media';
 import SignIn from './containers/auth/SignIn';
 import { RecoilRoot } from 'recoil';
 import Profile from './containers/profile/Profile';
+import Genres from './containers/genres/Genres';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile />,
+  },
+  {
+    path: '/genres',
+    element: <Genres />,
   },
 ]);
 

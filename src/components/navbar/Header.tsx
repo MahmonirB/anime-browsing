@@ -36,9 +36,9 @@ function Header() {
             <a href="#" className={linkClasses}>
               About
             </a>
-            <a href="#" className={linkClasses}>
+            <Link to="/genres" className={linkClasses}>
               Genres
-            </a>
+            </Link>
             <Link to="/media" className={linkClasses}>
               Media
             </Link>
