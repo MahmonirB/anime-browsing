@@ -1,5 +1,5 @@
 /* eslint-disable graphql/template-strings */
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 import { useEffect } from 'react';
 import Header from 'src/components/navbar/Header';
 import Features from 'src/containers/features/Features';
@@ -10,12 +10,6 @@ import { client } from '../../../apolloRestLink';
 import { useRecoilState } from 'recoil';
 import { authenticationData } from '../../store';
 
-const GENRE_COLLECTION = gql`
-  query GetGenreQuery {
-    GenreCollection
-  }
-`;
-
 const GET_TOKEN = gql`
   query getToken {
     data @rest(type: "Data", path: "/success") {
@@ -25,7 +19,6 @@ const GET_TOKEN = gql`
 `;
 
 function Landing() {
-  const { data } = useQuery(GENRE_COLLECTION);
   const [authToken, setAuthToken] = useRecoilState(authenticationData);
 
   useEffect(() => {
