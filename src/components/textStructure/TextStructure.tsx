@@ -3,7 +3,7 @@ import React from 'react';
 interface TextStructure {
   type: 'description' | 'title' | 'detail';
   title?: string;
-  content?: string;
+  content?: string | number;
   textLink?: string;
 }
 
