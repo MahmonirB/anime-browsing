@@ -6,6 +6,7 @@ import Spinner from 'src/components/spinner/Spinner';
 import MediaItem from './meidaItem/MediaItem';
 import useDebounce from 'src/hooks/useDebounce';
 import EmtptyState from 'src/components/emptyState/EmptyState';
+import { MEDIA_QUERY_Page_media } from './__generated__/MEDIA_QUERY';
 
 const MEDIA = gql`
   query MEDIA_QUERY($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -65,7 +66,7 @@ function Media() {
       {loading ? <Spinner /> : <></>}
 
       {pageData?.Page?.media?.length > 0 &&
-        pageData?.Page?.media?.map((mediaItem: any, index: number) => (
+        pageData?.Page?.media?.map((mediaItem: MEDIA_QUERY_Page_media, index: number) => (
           <MediaItem key={index} mediaItemData={mediaItem} />
         ))}
 
