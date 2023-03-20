@@ -10,6 +10,7 @@ import SignIn from './containers/auth/SignIn';
 import { RecoilRoot } from 'recoil';
 import Profile from './containers/profile/Profile';
 import Genres from './containers/genres/Genres';
+import About from './containers/about/About';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/genres',
     element: <Genres />,
+  },
+  {
+    path: '/about',
+    element: <About />,
   },
 ]);
 

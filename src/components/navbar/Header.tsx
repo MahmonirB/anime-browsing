@@ -33,9 +33,9 @@ function Header() {
             }`}
             id="navbar-collapse"
           >
-            <a href="#" className={linkClasses}>
+            <Link to="/about" className={linkClasses}>
               About
-            </a>
+            </Link>
             <Link to="/genres" className={linkClasses}>
               Genres
             </Link>
