@@ -4,11 +4,7 @@ import { ReactComponent as GoogleSvg } from '@assets/google.svg';
 import { ReactComponent as GithubSvg } from '@assets/github.svg';
 import { ReactComponent as AnilistSvg } from '@assets/anilist.svg';
 import Spinner from 'src/components/spinner/Spinner';
-import { REST_API_URL } from '@config/constants';
-
-const GITHUB_LOGIN_URL = `https://github.com/login/oauth/authorize?client_id=${
-  import.meta.env.VITE_GITHUB_CLIENT_ID
-}&redirect_uri=${import.meta.env.VITE_GITHUB_REDIRECT_URL}`;
+import { GITHUB_LOGIN_URL, REST_API_URL } from '@config/constants';
 
 const COMMON_CLASSNAMES =
   'px-7 py-3 mb-4 font-bold text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-evenly items-center';
