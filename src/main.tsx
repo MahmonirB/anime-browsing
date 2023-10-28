@@ -12,29 +12,38 @@ import Profile from './containers/profile/Profile';
 import Genres from './containers/genres/Genres';
 import About from './containers/about/About';
 
+export enum ROUTES {
+  home = '/',
+  media = '/media',
+  signIn = '/signin',
+  profile = '/profile',
+  genre = '/genres',
+  about = '/about',
+}
+
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: ROUTES.home,
     element: <Landing />,
   },
   {
-    path: '/media',
+    path: ROUTES.media,
     element: <Media />,
   },
   {
-    path: '/signin',
+    path: ROUTES.signIn,
     element: <SignIn />,
   },
   {
-    path: '/profile',
+    path: ROUTES.profile,
     element: <Profile />,
   },
   {
-    path: '/genres',
+    path: ROUTES.genre,
     element: <Genres />,
   },
   {
-    path: '/about',
+    path: ROUTES.about,
     element: <About />,
   },
 ]);
