@@ -19,6 +19,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'graphql', 'cypress'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/ban-types': 'off',
     'no-undef': 'off',
     'graphql/template-strings': [
       'error',
