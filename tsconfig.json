@@ -29,6 +29,7 @@
   ],
   "exclude": [
     "**/*.spec.ts",
+    "**/*.cy.ts",
     "./cypress.config.ts",
   ]
 }
